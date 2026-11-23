@@ -2,6 +2,7 @@
   {
     "id": "openai",
     "order": 1,
+    "group": "closed",
     "name": {
       "ja": "OpenAI",
       "zh": "OpenAI",
@@ -24,6 +25,7 @@
   {
     "id": "anthropic",
     "order": 2,
+    "group": "closed",
     "name": {
       "ja": "Anthropic",
       "zh": "Anthropic",
@@ -46,6 +48,7 @@
   {
     "id": "google",
     "order": 3,
+    "group": "closed",
     "name": {
       "ja": "Google DeepMind",
       "zh": "Google DeepMind",
@@ -66,8 +69,32 @@
     "website": "https://deepmind.google/blog/"
   },
   {
-    "id": "meta",
+    "id": "xai",
     "order": 4,
+    "group": "closed",
+    "name": {
+      "ja": "xAI",
+      "zh": "xAI",
+      "en": "xAI"
+    },
+    "shortName": {
+      "ja": "xAI",
+      "zh": "xAI",
+      "en": "xAI"
+    },
+    "tagline": {
+      "ja": "Grok フロンティア群",
+      "zh": "Grok 前沿大模型",
+      "en": "Grok frontier series"
+    },
+    "color": "#18181B",
+    "fg": "#FFFFFF",
+    "website": "https://x.ai/news"
+  },
+  {
+    "id": "meta",
+    "order": 5,
+    "group": "open",
     "name": {
       "ja": "Meta",
       "zh": "Meta",
@@ -89,7 +116,8 @@
   },
   {
     "id": "deepseek",
-    "order": 5,
+    "order": 6,
+    "group": "open",
     "name": {
       "ja": "DeepSeek",
       "zh": "DeepSeek",
@@ -110,30 +138,9 @@
     "website": "https://www.deepseek.com/"
   },
   {
-    "id": "xai",
-    "order": 6,
-    "name": {
-      "ja": "xAI",
-      "zh": "xAI",
-      "en": "xAI"
-    },
-    "shortName": {
-      "ja": "xAI",
-      "zh": "xAI",
-      "en": "xAI"
-    },
-    "tagline": {
-      "ja": "Grok フロンティア群",
-      "zh": "Grok 前沿大模型",
-      "en": "Grok frontier series"
-    },
-    "color": "#18181B",
-    "fg": "#FFFFFF",
-    "website": "https://x.ai/news"
-  },
-  {
     "id": "mistral",
     "order": 7,
+    "group": "open",
     "name": {
       "ja": "Mistral AI",
       "zh": "Mistral AI",
@@ -156,6 +163,7 @@
   {
     "id": "qwen",
     "order": 8,
+    "group": "open",
     "name": {
       "ja": "Alibaba Qwen",
       "zh": "阿里通义千问 Qwen",
@@ -176,8 +184,78 @@
     "website": "https://qwenlm.github.io/"
   },
   {
-    "id": "others",
+    "id": "glm",
     "order": 9,
+    "group": "open",
+    "name": {
+      "ja": "Z.ai (GLM)",
+      "zh": "智谱 Z.ai (GLM)",
+      "en": "Z.ai (GLM)"
+    },
+    "shortName": {
+      "ja": "GLM",
+      "zh": "GLM",
+      "en": "GLM"
+    },
+    "tagline": {
+      "ja": "Z.ai オープン MoE・推論",
+      "zh": "智谱开源 MoE 与推理系列",
+      "en": "Z.ai open MoE & agents"
+    },
+    "color": "#0F766E",
+    "fg": "#FFFFFF",
+    "website": "https://z.ai/"
+  },
+  {
+    "id": "kimi",
+    "order": 10,
+    "group": "open",
+    "name": {
+      "ja": "Moonshot (Kimi)",
+      "zh": "月之暗面 (Kimi)",
+      "en": "Moonshot (Kimi)"
+    },
+    "shortName": {
+      "ja": "Kimi",
+      "zh": "Kimi",
+      "en": "Kimi"
+    },
+    "tagline": {
+      "ja": "Moonshot 超長文・1T+ MoE",
+      "zh": "月之暗面长上下文与万亿 MoE",
+      "en": "Moonshot long-context & MoE"
+    },
+    "color": "#A21CAF",
+    "fg": "#FFFFFF",
+    "website": "https://www.kimi.com/"
+  },
+  {
+    "id": "japan",
+    "order": 11,
+    "group": "japan",
+    "name": {
+      "ja": "日本発 AI (Japan)",
+      "zh": "日本自研 AI (Japan)",
+      "en": "Japan Labs"
+    },
+    "shortName": {
+      "ja": "Japan",
+      "zh": "Japan",
+      "en": "Japan"
+    },
+    "tagline": {
+      "ja": "PLaMo・tsuzumi・LLM-jp・Sarashina ほか",
+      "zh": "PLaMo・tsuzumi・LLM-jp・Sarashina 等",
+      "en": "PLaMo, tsuzumi, LLM-jp, Sarashina & more"
+    },
+    "color": "#DC2626",
+    "fg": "#FFFFFF",
+    "website": "https://llm-jp.nii.ac.jp/"
+  },
+  {
+    "id": "others",
+    "order": 12,
+    "group": "others",
     "name": {
       "ja": "Others (その他主要機関)",
       "zh": "Others（其他重要机构）",
@@ -189,11 +267,11 @@
       "en": "Others"
     },
     "tagline": {
-      "ja": "Z.ai・Moonshot・NVIDIA・Microsoft ほか",
-      "zh": "Z.ai・Moonshot・NVIDIA・Microsoft 等",
-      "en": "Z.ai, Moonshot, NVIDIA, Microsoft & more"
+      "ja": "MiniMax・ByteDance・NVIDIA・Microsoft ほか",
+      "zh": "MiniMax・ByteDance・NVIDIA・Microsoft 等",
+      "en": "MiniMax, ByteDance, NVIDIA, Microsoft & more"
     },
-    "color": "#BE123C",
+    "color": "#475569",
     "fg": "#FFFFFF",
     "website": "https://openrouter.ai/models"
   }

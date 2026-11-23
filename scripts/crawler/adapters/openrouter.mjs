@@ -53,7 +53,7 @@ export async function crawlOpenRouter({ fetchFn = globalThis.fetch, url = OPENRO
         description: String(item?.description || "").trim(),
         modality: String(item?.architecture?.modality || ""),
         contextTokens: Number(item?.context_length || item?.top_provider?.context_length || 0) || null,
-        openWeights: ["meta", "deepseek", "qwen"].includes(orgId),
+        openWeights: ["meta", "deepseek", "qwen", "glm", "kimi"].includes(orgId),
         officialUrl: `https://openrouter.ai/models/${id}`,
         sourceType: "openrouter",
         discoveredFrom: "OpenRouter API",

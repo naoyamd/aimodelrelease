@@ -15,10 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  crawl-and-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -63,6 +60,13 @@ jobs:
         with:
           path: dist
 
+  deploy:
+    needs: crawl-and-build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

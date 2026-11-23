@@ -11,10 +11,10 @@
 
 ## 主な特徴 (Features)
 
-- **企業 × 月別マトリクス表示**: 横軸に主要 8 機関（OpenAI / Anthropic / Google DeepMind / Meta / DeepSeek / xAI / Mistral AI / Alibaba Qwen）＋ **Others（Z.ai / Moonshot / MiniMax / ByteDance / NVIDIA / Microsoft / Cohere / Amazon / BFL / AllenAI ほか）** の計 9 列、縦軸に最新月から過去へ遡る月次タイムラインを配置。ヘッダーと月列を固定し、スクロールしても見失いません。
+- **企業 × 月別マトリクス表示**: 横軸を **非公開寄り（OpenAI / Anthropic / Google / xAI）**・**公開寄り（Meta / DeepSeek / Mistral / Qwen / GLM / Kimi）**・**日本発 AI（Japan Labs）**・**Others** の計 12 列でグループ分けし、縦軸に最新月から過去へ遡る月次タイムラインを配置。2段ヘッダーと月列を固定し、グループ境界線で一目で比較できます。
 - **日中英（日本語 / 中文 / English）ワンクリック切替**: UI 文言・日付フォーマット・各モデルの概要/ハイライトをすべて 3 言語で表示。URL クエリ `?lang=ja|zh|en` やブラウザ設定にも対応。
-- **検索・カテゴリ・年ジャンプ・詳細ドロワー**: モデル名・作成機関名検索（`/` キー）、`Flagship` / `Reasoning` / `Open Weights` / `Multimodal` / `Compact` フィルタ、年ジャンプボタン、空白月圧縮、マトリクス／タイムライン表示切替、各社ラインカラーによる列識別、右側スライドオーバー仕様書ドロワー（`←`/`→` 送り）に対応。
-- **自作ゼロ依存デイリークローラー**: 外部 npm パッケージを使わず Node.js 20+ 標準機能のみで OpenRouter API・公式/ミラー RSS・Hugging Face Hub API・GitHub Releases を巡回。量子化派生やノイズを除外し、主要 8 機関および Others 枠の著名モデルの新規リリースのみを自動追記します。
+- **検索・カテゴリ・グループ絞込・詳細ドロワー**: モデル名・作成機関名検索（`/` キー）、カテゴリフィルタ、グループ単独表示・社別単独表示、年ジャンプ、空白月圧縮、マトリクス／タイムライン表示切替、各社ラインカラーによる列識別、右側スライドオーバー仕様書ドロワー（`←`/`→` 送り）に対応。
+- **自作ゼロ依存デイリークローラー**: 外部 npm パッケージを使わず Node.js 20+ 標準機能のみで OpenRouter API・公式/ミラー RSS・Hugging Face Hub API・GitHub Releases を巡回。量子化派生やノイズを除外し、主要機関・GLM・Kimi・日本発 AI・Others 枠の著名モデルの新規リリースのみを自動追記します。
 - **GitHub Pages 完全対応**: ビルド成果物 `dist/` は相対パスで構成されており、`https://naoyamd.github.io/aimodelrelease/` 上でそのまま公開・自動デプロイされます。
 
 ---

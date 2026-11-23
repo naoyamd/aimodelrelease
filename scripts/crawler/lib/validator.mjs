@@ -7,6 +7,7 @@ const VALID_CATEGORIES = new Set([
   "compact",
 ]);
 const LANGS = ["ja", "zh", "en"];
+const VALID_GROUPS = new Set(["closed", "open", "japan", "others"]);
 
 /**
  * Strictly validate orgs and merged models dataset. Throws an Error summarizing any violations.
@@ -32,6 +33,9 @@ export function validateDataset({ orgs, models }) {
         errors.push(`duplicate org id: ${org.id}`);
       }
       orgIds.add(org.id);
+      if (org?.group !== undefined && !VALID_GROUPS.has(org.group)) {
+        errors.push(`org ${org.id} invalid group: ${org.group}`);
+      }
       for (const lang of LANGS) {
         if (!org.name?.[lang]?.trim()) {
           errors.push(`org ${org.id} missing name.${lang}`);
@@ -88,8 +92,8 @@ export function validateDataset({ orgs, models }) {
         errors.push(`model ${ref} creator must be a non-empty string when present`);
       }
 
-      if (m?.orgId === "others" && (typeof m?.creator !== "string" || !m.creator.trim())) {
-        errors.push(`model ${ref} with orgId "others" requires creator attribution`);
+      if ((m?.orgId === "others" || m?.orgId === "japan") && (typeof m?.creator !== "string" || !m.creator.trim())) {
+        errors.push(`model ${ref} with orgId "${m.orgId}" requires creator attribution`);
       }
 
       for (const lang of LANGS) {

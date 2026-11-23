@@ -16,7 +16,10 @@ const ORG_NOTABLE_PATTERNS = {
   xai: /\b(grok[\s-]*(?:1\.5|2|3|4(?:\.\d+)?|5(?:\.\d+)?|voice[\s-]*\d(?:\.\d+)?)(?:[\s-]*(?:mini|heavy|fast))?)\b/i,
   mistral: /\b(mistral[\s-]*(?:large|medium|small)[\s-]*[2345]?|mixtral[\s-]*8x(?:7|22)b|pixtral(?:\s*large)?|codestral|devstral|magistral|voxtral(?:\s*[23])?|leanstral)\b/i,
   qwen: /\b(qwen[\s-]*[234](?:\.\d+)?(?:[\s-]*(?:max|plus|turbo|coder|vl|omni|next|235b|2\.4t|27b|32b|72b))?|qwq[\s-]*(?:32b|\d+b)|qvq[\s-]*\d+b)\b/i,
-  others: /(?:^|[^a-z0-9])(?:glm[\s-]*(?:4\.\d+|5(?:\.\d+)?|z1)|kimi[\s-]*k[2345](?:\.\d+)?|minimax[\s-]*m[1234](?:\.\d+)?|seed[\s-]*[23](?:\.\d+)?|nemotron[\s-]*[345](?:[\s-]*(?:nano|super|ultra))?|phi[\s-]*[345]|command[\s-]*(?:r(?:\+|-plus)?|a(?:\+|-plus)?)|amazon[\s-]*nova|nova[\s-]*(?:micro|lite|pro|premier)|flux[\s.]*[123]|olmo[\s-]*[234])(?![a-z0-9])/i,
+  glm: /\b(glm[\s-]*(?:4(?:\.\d+|-\d+b)?|5(?:\.\d+)?|z1))\b/i,
+  kimi: /\b(kimi[\s-]*(?:k[12345](?:\.\d+)?(?:\s*thinking)?|vl))\b/i,
+  japan: /\b(plamo[\s-]*(?:100b|[234](?:\.\d+)?(?:\s*(?:prime|translate))?)|tsuzumi[\s-]*[23]?|sarashina[\s-]*[23](?:\.\d+)?|llm-jp-[345](?:\.\d+)?|rakuten[\s-]*ai[\s-]*[234](?:\.\d+)?|stockmark-[23]|elyza-(?:thinking|shortcut)|(?:llama[\s-]*3|qwen[\s-]*3|gpt-oss)[\s-]*swallow|tinyswallow|evollm-jp|calm[34]|fugaku-llm)\b/i,
+  others: /(?:^|[^a-z0-9])(?:minimax[\s-]*m[1234](?:\.\d+)?|seed[\s-]*[23](?:\.\d+)?|nemotron[\s-]*[345](?:[\s-]*(?:nano|super|ultra))?|phi[\s-]*[345]|command[\s-]*(?:r(?:\+|-plus)?|a(?:\+|-plus)?)|amazon[\s-]*nova|nova[\s-]*(?:micro|lite|pro|premier)|flux[\s.]*[123]|olmo[\s-]*[234])(?![a-z0-9])/i,
 };
 
 const RSS_RELEASE_CUE_RE = /\b(introduc|announc|releas|launch|unveil|availab|new model|open[- ]?weights?|preview|introducing|now available|rolling out)\b/i;

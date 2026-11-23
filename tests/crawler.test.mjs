@@ -99,9 +99,12 @@ test("notability filter accepts landmark models and rejects noise/quantizations"
   for (const notable of [
     { orgId: "openai", name: "gpt-oss-120b", releaseDate: "2026-11-20", sourceType: "openrouter" },
     { orgId: "mistral", name: "Pixtral Large", releaseDate: "2026-11-20", sourceType: "openrouter" },
-    { orgId: "others", creator: "Moonshot", name: "Kimi K4", releaseDate: "2026-11-20", sourceType: "openrouter" },
-    { orgId: "others", creator: "Z.ai", name: "GLM-5.4", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "kimi", name: "Kimi K4", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "glm", name: "GLM-5.4", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "japan", creator: "PFN", name: "PLaMo 3.0 Prime", releaseDate: "2026-11-20", sourceType: "rss" },
+    { orgId: "japan", creator: "LLM-jp", name: "LLM-jp-4.1", releaseDate: "2026-11-20", sourceType: "huggingface", likes: 300 },
     { orgId: "others", creator: "Cohere", name: "Command A+", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "others", creator: "MiniMax", name: "MiniMax M4", releaseDate: "2026-11-20", sourceType: "openrouter" },
   ]) {
     const res = evaluateNotability(notable, { now: NOW });
     assert.equal(res.accepted, true, `Expected acceptance for ${notable.name}, got ${res.reason}`);
@@ -159,6 +162,14 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
           architecture: { modality: "text+image->text" },
         },
         {
+          id: "minimax/minimax-m4",
+          name: "MiniMax: MiniMax M4",
+          created: 1795132800,
+          context_length: 1000000,
+          description: "Next-gen hybrid agent model",
+          architecture: { modality: "text+image->text" },
+        },
+        {
           id: "some-unknown/model",
           name: "Ignored Org",
           created: 1795132800,
@@ -168,12 +179,16 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
 
   const orRes = await crawlOpenRouter({ fetchFn: mockOpenRouter });
   assert.equal(orRes.ok, true);
-  assert.equal(orRes.candidates.length, 2);
+  assert.equal(orRes.candidates.length, 3);
   assert.equal(orRes.candidates[0].orgId, "openai");
   assert.equal(orRes.candidates[0].name, "GPT-6.5");
-  assert.equal(orRes.candidates[1].orgId, "others");
-  assert.equal(orRes.candidates[1].creator, "Moonshot");
+  assert.equal(orRes.candidates[1].orgId, "kimi");
+  assert.equal(orRes.candidates[1].creator, undefined);
+  assert.equal(orRes.candidates[1].openWeights, true);
   assert.equal(orRes.candidates[1].name, "Kimi K4");
+  assert.equal(orRes.candidates[2].orgId, "others");
+  assert.equal(orRes.candidates[2].creator, "MiniMax");
+  assert.equal(orRes.candidates[2].name, "MiniMax M4");
 
   const mockRss = async (url) => {
     if (url.includes("anthropic")) return textResponse("Server Error", 500);
@@ -196,8 +211,20 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
   assert.equal(rssRes.candidates.length, 1);
   assert.ok(rssRes.error.includes("HTTP 500"));
 
-  const mockHf = async () =>
-    jsonResponse([
+  const mockHf = async (url) => {
+    if (String(url).includes("author=pfnet")) {
+      return jsonResponse([
+        {
+          id: "pfnet/PLaMo-4-Base",
+          createdAt: "2026-11-22T00:00:00.000Z",
+          likes: 600,
+          downloads: 12000,
+          pipeline_tag: "text-generation",
+          tags: ["japanese", "apache-2.0"],
+        },
+      ]);
+    }
+    return jsonResponse([
       {
         id: "deepseek-ai/DeepSeek-R2",
         createdAt: "2026-11-21T00:00:00.000Z",
@@ -207,13 +234,20 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
         tags: ["reasoning", "mit"],
       },
     ]);
+  };
 
   const hfRes = await crawlHuggingFace({
     fetchFn: mockHf,
-    orgs: [{ author: "deepseek-ai", orgId: "deepseek" }],
+    orgs: [
+      { author: "deepseek-ai", orgId: "deepseek" },
+      { author: "pfnet", orgId: "japan", creator: "PFN" },
+    ],
   });
   assert.equal(hfRes.ok, true);
   assert.equal(hfRes.candidates[0].name, "DeepSeek-R2");
+  assert.equal(hfRes.candidates[1].orgId, "japan");
+  assert.equal(hfRes.candidates[1].creator, "PFN");
+  assert.equal(hfRes.candidates[1].name, "PLaMo-4-Base");
 
   const mockGh = async () =>
     jsonResponse([

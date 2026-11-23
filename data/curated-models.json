@@ -2768,8 +2768,7 @@
   },
   {
     "id": "glm-4-5",
-    "orgId": "others",
-    "creator": "Z.ai",
+    "orgId": "glm",
     "name": "GLM-4.5",
     "releaseDate": "2025-07-28",
     "releaseMonth": "2025-07",
@@ -2793,8 +2792,7 @@
   },
   {
     "id": "glm-5",
-    "orgId": "others",
-    "creator": "Z.ai",
+    "orgId": "glm",
     "name": "GLM-5",
     "releaseDate": "2026-02-11",
     "releaseMonth": "2026-02",
@@ -2818,8 +2816,7 @@
   },
   {
     "id": "glm-5-2",
-    "orgId": "others",
-    "creator": "Z.ai",
+    "orgId": "glm",
     "name": "GLM-5.2",
     "releaseDate": "2026-06-16",
     "releaseMonth": "2026-06",
@@ -2843,8 +2840,7 @@
   },
   {
     "id": "glm-5-4",
-    "orgId": "others",
-    "creator": "Z.ai",
+    "orgId": "glm",
     "name": "GLM-5.4",
     "releaseDate": "2026-11-23",
     "releaseMonth": "2026-11",
@@ -2868,8 +2864,7 @@
   },
   {
     "id": "kimi-k2",
-    "orgId": "others",
-    "creator": "Moonshot",
+    "orgId": "kimi",
     "name": "Kimi K2",
     "releaseDate": "2025-07-11",
     "releaseMonth": "2025-07",
@@ -2893,8 +2888,7 @@
   },
   {
     "id": "kimi-k2-5",
-    "orgId": "others",
-    "creator": "Moonshot",
+    "orgId": "kimi",
     "name": "Kimi K2.5",
     "releaseDate": "2026-01-27",
     "releaseMonth": "2026-01",
@@ -2918,8 +2912,7 @@
   },
   {
     "id": "kimi-k3",
-    "orgId": "others",
-    "creator": "Moonshot",
+    "orgId": "kimi",
     "name": "Kimi K3",
     "releaseDate": "2026-07-16",
     "releaseMonth": "2026-07",
@@ -3440,5 +3433,672 @@
     "officialUrl": "https://allenai.org/blog/olmo3",
     "source": "curated",
     "aliases": ["olmo-3", "olmo 3", "olmo-3-think"]
+  },
+  {
+    "id": "glm-4",
+    "orgId": "glm",
+    "name": "GLM-4",
+    "releaseDate": "2024-01-16",
+    "releaseMonth": "2024-01",
+    "tier": "flagship",
+    "categories": ["flagship", "multimodal"],
+    "openWeights": false,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "128K コンテキスト・オールツール自律実行・マルチモーダル生成を備えた Zhipu AI（現 Z.ai）の第4世代基盤モデル。",
+      "zh": "智谱 AI 第 4 代基座大模型，全面升级至 128K 长上下文、All Tools 自动工具编排与原生中文理解。",
+      "en": "Zhipu AI's (now Z.ai) fourth-generation flagship model introducing 128K context, All Tools orchestration, and multimodal capabilities."
+    },
+    "highlights": {
+      "ja": ["プロプライエタリ API 旗艦として中国語・推論・Web 検索連携を大きく強化", "後続のオープンウェイト群 GLM-4-9B / 32B / 4.5 へ繋がる基盤世代"],
+      "zh": ["全面对标 GPT-4 的第四代中文与工具调用旗舰底座", "为后续 GLM-4 开源矩阵及 GLM-4.5/5 奠定架构基础"],
+      "en": ["Established Zhipu's 128K enterprise & All-Tools generation", "Precursor to the widely adopted open-weights GLM-4 family"]
+    },
+    "officialUrl": "https://z.ai/",
+    "source": "curated",
+    "aliases": ["glm-4", "glm4"]
+  },
+  {
+    "id": "glm-4-9b",
+    "orgId": "glm",
+    "name": "GLM-4-9B",
+    "releaseDate": "2024-06-05",
+    "releaseMonth": "2024-06",
+    "tier": "notable",
+    "categories": ["open-weights", "multimodal", "compact"],
+    "openWeights": true,
+    "contextWindow": "1M",
+    "summary": {
+      "ja": "わずか 9B パラメータで最大 1M コンテキスト版と視覚理解モデル GLM-4V-9B を含む高普及オープンシリーズ。",
+      "zh": "9B 轻量参数规模下提供标准 128K、极限 1M 长文本版及多模态视觉版 GLM-4V-9B 的高人气开源家族。",
+      "en": "Open-weights 9B foundation line featuring Chat, 1M long-context, and Vision (GLM-4V-9B) editions across 26 languages."
+    },
+    "highlights": {
+      "ja": ["1M 長文脈モデル（glm-4-9b-chat-1m）により単一 GPU での長文解析を普及", "日本語を含む多言語対話・関数呼び出し・コード実行を標準搭載"],
+      "zh": ["开源业内少见的 9B 级 1M 超长上下文模型（约 200 万汉字）", "同步开源支持高分辨率图像理解的 GLM-4V-9B"],
+      "en": ["Shipped rare single-GPU 1M-context open weights (glm-4-9b-chat-1m)", "Supported 26 languages alongside high-resolution GLM-4V vision"]
+    },
+    "officialUrl": "https://huggingface.co/zai-org/glm-4-9b-chat-1m",
+    "source": "curated",
+    "aliases": ["glm-4-9b", "glm-4-9b-chat", "glm-4-9b-chat-1m", "glm-4v-9b"]
+  },
+  {
+    "id": "glm-4-32b-z1",
+    "orgId": "glm",
+    "name": "GLM-4-32B & GLM-Z1",
+    "releaseDate": "2025-04-14",
+    "releaseMonth": "2025-04",
+    "tier": "notable",
+    "categories": ["open-weights", "reasoning", "compact"],
+    "openWeights": true,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "MIT ライセンスの 32B 高密度モデルと、強化学習で深思考を獲得した低遅延推論モデル GLM-Z1-32B / Z1-Rumination。",
+      "zh": "采用 MIT 协议开源的 32B 底座 GLM-4-32B-0414 及经过深度扩展强化学习淬炼的思考推理版 GLM-Z1 系列。",
+      "en": "MIT-licensed 32B dense family pairing GLM-4-32B-0414 with extended-RL reasoning variant GLM-Z1-32B (plus Z1-Rumination)."
+    },
+    "highlights": {
+      "ja": ["32B 級ながら巨大モデルの推論能力に迫る高コスト効率を達成", "深層リサーチ向けの GLM-Z1-Rumination と軽量 9B 推論版も同時展開"],
+      "zh": ["以 32B 紧凑体量实现媲美超大参数模型的数学与代码推理性能", "全面转用宽松 MIT 开源协议并发布 Z1 深度沉思变体"],
+      "en": ["Adopted permissive MIT license for 9B & 32B dense & reasoning models", "Added GLM-Z1-Rumination for multi-step deep research workflows"]
+    },
+    "officialUrl": "https://github.com/zai-org/GLM-4",
+    "source": "curated",
+    "aliases": ["glm-4-32b", "glm-4-32b-0414", "glm-z1", "glm-z1-32b"]
+  },
+  {
+    "id": "glm-4-6",
+    "orgId": "glm",
+    "name": "GLM-4.6",
+    "releaseDate": "2025-09-30",
+    "releaseMonth": "2025-09",
+    "tier": "notable",
+    "categories": ["open-weights", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "200K",
+    "summary": {
+      "ja": "200K コンテキストへ拡張しエージェント型コーディング性能と推論トークン効率を約3割改善した MIT オープンモデル。",
+      "zh": "将上下文扩展至 200K 并重点优化终端编程智能体表现与思考 Token 效率的 MIT 开源升级版 GLM-4.6。",
+      "en": "200K-context upgrade delivering major real-world agentic coding gains and ~30% higher token efficiency under MIT license."
+    },
+    "highlights": {
+      "ja": ["128K→200K へ拡大し Claude Code 等の開発エージェント用途で広く定着", "ツール連携検索とハイブリッド思考制御の精度を大幅向上"],
+      "zh": ["上下文升至 200K，成为开源 CLI 代码智能体主力底座之一", "同等任务较 GLM-4.5 节省约 30% 推理 Token 消耗"],
+      "en": ["Expanded context from 128K to 200K for multi-file coding agents", "Cut token consumption by ~30% while boosting tool-use reliability"]
+    },
+    "officialUrl": "https://z.ai/blog/glm-4.6",
+    "source": "curated",
+    "aliases": ["glm-4.6", "glm-4-6"]
+  },
+  {
+    "id": "glm-4-7",
+    "orgId": "glm",
+    "name": "GLM-4.7",
+    "releaseDate": "2025-12-22",
+    "releaseMonth": "2025-12",
+    "tier": "notable",
+    "categories": ["open-weights", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "200K",
+    "summary": {
+      "ja": "多言語エージェント開発（SWE-bench Multilingual）とフロントエンド UI 生成を極限まで高めた第4世代完成形（MIT）。",
+      "zh": "2025 年底发布的 GLM-4 系列收官进化版，多语言工程修复、终端工具执行与前端界面审美全面跃升。",
+      "en": "Late-2025 open-weights coding & reasoning refinement dramatically boosting SWE-bench Multilingual, Terminal Bench, and UI synthesis."
+    },
+    "highlights": {
+      "ja": ["SWE-bench 73.8%・HLE 等で年末当時のオープン最上位スコアを記録", "推論ターンを跨ぐ「Preserved Thinking」によりエージェント成功率を向上"],
+      "zh": ["在 SWE-bench Verified 达 73.8%，多项工具榜单跃居开源前列", "引入跨轮次思维保持机制，大幅提升长链条复杂工程稳定性"],
+      "en": ["Hit 73.8% on SWE-bench Verified under open MIT weights", "Introduced preserved-thinking turns tailored to coding agents"]
+    },
+    "officialUrl": "https://z.ai/blog/glm-4.7",
+    "source": "curated",
+    "aliases": ["glm-4.7", "glm-4-7"]
+  },
+  {
+    "id": "kimi-k1-5",
+    "orgId": "kimi",
+    "name": "Kimi k1.5",
+    "releaseDate": "2025-01-20",
+    "releaseMonth": "2025-01",
+    "tier": "flagship",
+    "categories": ["flagship", "reasoning", "multimodal"],
+    "openWeights": false,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "DeepSeek-R1 と同日に発表され、視覚・テキスト統合 Long-CoT 強化学習で OpenAI o1 に匹敵した Moonshot 転換点モデル。",
+      "zh": "与 DeepSeek-R1 同日发布的月之暗面里程碑推理模型，依靠多模态长思维链与策略梯度缩放比肩 OpenAI o1。",
+      "en": "Moonshot AI's multimodal long-CoT RL milestone (co-released Jan 20, 2025) matching OpenAI o1 across math, code, and vision."
+    },
+    "highlights": {
+      "ja": ["Long-CoT→Short-CoT 蒸留や長い思考鎖の冗長性抑制手法を論文で体系化", "数学・競技プログラミング・図表視覚推論を単一 RL 枠組みで統合"],
+      "zh": ["在多模态数学、代码竞赛等 Long-CoT 基准追平满血版 o1", "技术报告提出的 Long2Short 上下文压缩微调影响深远"],
+      "en": ["Matched OpenAI o1 on math, coding, and visual reasoning benchmarks", "Published influential RL scaling and Long2Short reasoning distillation"]
+    },
+    "officialUrl": "https://github.com/MoonshotAI/Kimi-k1.5",
+    "source": "curated",
+    "aliases": ["kimi-k1.5", "kimi k1.5", "kimi-k1-5"]
+  },
+  {
+    "id": "kimi-vl",
+    "orgId": "kimi",
+    "name": "Kimi-VL",
+    "releaseDate": "2025-04-10",
+    "releaseMonth": "2025-04",
+    "tier": "notable",
+    "categories": ["open-weights", "multimodal", "compact"],
+    "openWeights": true,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "活性わずか 2.8B（総 16B）MoE＋ネイティブ解像度 MoonViT で長動画・GUI・視覚思考に対応するオープン VLM。",
+      "zh": "仅激活 2.8B 参数（总 16B）却具备原生高清感知、长视频理解与深度视觉推理（Thinking 版）的高效开源 MoE VLM。",
+      "en": "Compact 16B-total (2.8B-active) open-weights MoE vision-language model pairing native-resolution MoonViT with Thinking CoT."
+    },
+    "highlights": {
+      "ja": ["MoonViT ネイティブ解像度エンコーダで高密度文書・OS 画面操作を高精度解析", "思考特化版 Kimi-VL-A3B-Thinking も MIT で同時オープン公開"],
+      "zh": ["采用 MoonViT 原生分辨率编码器，胜任 OS 界面代理与密集文档", "同步开源带长思维链的 Kimi-VL-A3B-Thinking"],
+      "en": ["Native-resolution MoonViT handles dense docs, video & GUI agents", "MIT open weights with dedicated A3B-Thinking reasoning variant"]
+    },
+    "officialUrl": "https://github.com/MoonshotAI/Kimi-VL",
+    "source": "curated",
+    "aliases": ["kimi-vl", "kimi-vl-a3b"]
+  },
+  {
+    "id": "kimi-k2-thinking",
+    "orgId": "kimi",
+    "name": "Kimi K2 Thinking",
+    "releaseDate": "2025-11-06",
+    "releaseMonth": "2025-11",
+    "tier": "flagship",
+    "categories": ["flagship", "open-weights", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "256K",
+    "summary": {
+      "ja": "200〜300 回の連続自律ツール呼び出しとネイティブ INT4 量子化推論に対応した 1T オープンエージェンティック推論機。",
+      "zh": "支持连续 200～300 步自主推理与工具联动、原生量化为 INT4 的万亿参数开源深度思考智能体模型。",
+      "en": "1T-parameter open-weights reasoning agent executing 200–300 interleaved tool calls cleanly with quantization-aware INT4 weights."
+    },
+    "highlights": {
+      "ja": ["Humanity's Last Exam / BrowseComp で公開時世界トップ級スコアを達成", "テスト時計算スケーリングと超長手順自律リサーチをオープン重みで実証"],
+      "zh": ["在 Humanity's Last Exam 与 BrowseComp 等高难测试刷新开源纪录", "支持端到端交错思考与连续工具调用，原生 QAT INT4 高效推理"],
+      "en": ["Set open-weights records on Humanity's Last Exam and BrowseComp", "Native QAT INT4 quantization halves 1T inference memory footprint"]
+    },
+    "officialUrl": "https://moonshotai.github.io/Kimi-K2/thinking.html",
+    "source": "curated",
+    "aliases": ["kimi-k2-thinking", "kimi k2 thinking"]
+  },
+  {
+    "id": "sakana-evollm-jp",
+    "orgId": "japan",
+    "creator": "Sakana AI",
+    "name": "EvoLLM-JP & EvoVLM-JP",
+    "releaseDate": "2024-03-21",
+    "releaseMonth": "2024-03",
+    "tier": "notable",
+    "categories": ["open-weights", "multimodal", "compact"],
+    "openWeights": true,
+    "contextWindow": "8K",
+    "summary": {
+      "ja": "進化的モデルマージ手法で日本語×数学／視覚モデルの能力を自動融合し世界的に注目された Sakana AI 初代日本発モデル群。",
+      "zh": "Sakana AI 首创“进化式模型融合”打造的首批开源日语模型，自动进化出兼具日语数学推理与多模态视觉能力。",
+      "en": "Sakana AI's breakthrough evolutionary model-merging releases fusing Japanese fluency with math reasoning & vision (Apache 2.0)."
+    },
+    "highlights": {
+      "ja": ["勾配学習なしで重み空間・データフローを進化探索し 7B で大型機超え", "進化的モデルマージ研究として国際学会・AI コミュニティで大きな反響"],
+      "zh": ["无需传统反向传播微调，以进化算法融合生成 7B 级高分模型", "成为 2024 年全球 AI 领域最受关注的东京团队开源工作之一"],
+      "en": ["Pioneered gradient-free evolutionary weight & layer-space merging", "Sparked global adoption via open Apache 2.0 7B/10B checkpoints"]
+    },
+    "officialUrl": "https://sakana.ai/evolutionary-model-merge/",
+    "source": "curated",
+    "aliases": ["evollm-jp", "evovlm-jp", "sakana-evollm-jp"]
+  },
+  {
+    "id": "ntt-tsuzumi",
+    "orgId": "japan",
+    "creator": "NTT",
+    "name": "tsuzumi",
+    "releaseDate": "2024-03-25",
+    "releaseMonth": "2024-03",
+    "tier": "notable",
+    "categories": ["multimodal", "compact"],
+    "openWeights": false,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "0.6B（超軽量）と 7B（軽量）で世界トップ級の日本語性能・帳票図表読解・省電力オンプレ動作を実現した NTT 独自 LLM。",
+      "zh": "NTT 面向日本企业低功耗私有化部署打造的自研轻量旗舰大模型 tsuzumi（7B / 0.6B），主打高中文书解析与低算力开销。",
+      "en": "NTT's compact proprietary Japanese enterprise LLM (7B & 0.6B) built for energy-efficient on-premises & visual document workflows."
+    },
+    "highlights": {
+      "ja": ["日本語トークン効率と日本の業務帳票・音声・図表のアダプタ拡張に特化", "1 GPU やオンプレミス環境へ安全に導入する国産商用モデルの先駆け"],
+      "zh": ["专为日语敬语、票据图表识别与垂直行业微调适配设计", "大幅降低微调与推理能耗，单卡即可支撑企业安全部署"],
+      "en": ["Engineered for high-efficiency Japanese & structured chart reading", "Adopted widely in Japanese enterprise & sovereign environments"]
+    },
+    "officialUrl": "https://www.rd.ntt/e/research/LLM_tsuzumi.html",
+    "source": "curated",
+    "aliases": ["tsuzumi", "ntt-tsuzumi"]
+  },
+  {
+    "id": "fugaku-llm",
+    "orgId": "japan",
+    "creator": "Fugaku-LLM",
+    "name": "Fugaku-LLM (13B)",
+    "releaseDate": "2024-05-10",
+    "releaseMonth": "2024-05",
+    "tier": "notable",
+    "categories": ["open-weights", "compact"],
+    "openWeights": true,
+    "contextWindow": "4K",
+    "summary": {
+      "ja": "スーパーコンピュータ「富岳」（CPU のみの大規模並列環境）でゼロから事前学習し完全国内開発した 13B 国産オープン LLM。",
+      "zh": "完全依托日本超级计算机「富岳」（纯 CPU 集群）从零预训练打造的 13B 国产开源日语大模型。",
+      "en": "13B open Japanese foundation model trained entirely from scratch on the Fugaku supercomputer by a national research consortium."
+    },
+    "highlights": {
+      "ja": ["東工大・東北大・富士通・理研・名古屋大・サイバーエージェント等が共同開発", "国産スパコンでの純国産データ事前学習として日本語対話基準で当時首位"],
+      "zh": ["由东工大、东北大、富士通、理化学研究所等产学研联合训练", "在敬语处理与日本本土文化理解任务上创当时开源模型佳绩"],
+      "en": ["Trained on 13,824 Fugaku nodes without external foundation weights", "Set open Japanese conversational & academic benchmark standards"]
+    },
+    "officialUrl": "https://huggingface.co/Fugaku-LLM/Fugaku-LLM-13B",
+    "source": "curated",
+    "aliases": ["fugaku-llm", "fugaku-llm-13b"]
+  },
+  {
+    "id": "swallow-llama3",
+    "orgId": "japan",
+    "creator": "Swallow",
+    "name": "Llama 3 Swallow",
+    "releaseDate": "2024-07-01",
+    "releaseMonth": "2024-07",
+    "tier": "notable",
+    "categories": ["open-weights"],
+    "openWeights": true,
+    "contextWindow": "8K",
+    "summary": {
+      "ja": "東京科学大学（旧東工大）岡崎研・産総研チームが Llama 3 を大規模日本語継続事前学習で刷新した代表的な国産オープン系列。",
+      "zh": "东京科学大学（原东工大）与产总研基于 Llama 3 进行大规模日语持续预训练的代表性开源日语系列。",
+      "en": "Continually pre-trained Japanese open models (8B & 70B) by Institute of Science Tokyo & AIST transforming Llama 3 fluency."
+    },
+    "highlights": {
+      "ja": ["70B クラスで日本語 MT-Bench / JLM 評価を飛躍的に引き上げ", "以降の Llama 3.1/3.3・Qwen3・GPT-OSS Swallow シリーズへ続く基軸"],
+      "zh": ["显著补强日语语料能力并保持原底座的英文及代码推理水准", "系列持续迭代至 Llama 3.3 / Qwen3 / GPT-OSS Swallow"],
+      "en": ["Delivered substantial Japanese comprehension without catastrophic forgetting", "Flagship academic-industrial Japanese open LLM series"]
+    },
+    "officialUrl": "https://swallow-llm.github.io/",
+    "source": "curated",
+    "aliases": ["llama-3-swallow", "swallow", "llama-3.1-swallow", "llama-3.3-swallow"]
+  },
+  {
+    "id": "cyberagent-calm3",
+    "orgId": "japan",
+    "creator": "CyberAgent",
+    "name": "Calm3 (22B)",
+    "releaseDate": "2024-07-03",
+    "releaseMonth": "2024-07",
+    "tier": "notable",
+    "categories": ["open-weights", "compact"],
+    "openWeights": true,
+    "contextWindow": "4K",
+    "summary": {
+      "ja": "サイバーエージェントが 2 兆トークンからフルスクラッチ構築し Apache 2.0 で公開した国産 22.5B 商用可オープン LLM。",
+      "zh": "CyberAgent 基于约 2 万亿 Token 从零训练并以 Apache 2.0 开源发布的 22.5B 日本商用级基座模型。",
+      "en": "CyberAgent's 22.5B Japanese LLM pre-trained cleanly from scratch on 2 trillion tokens and released openly under Apache 2.0."
+    },
+    "highlights": {
+      "ja": ["他社モデル派生でない独自フルスクラッチ設計かつ制限なし商用利用可能", "国内企業のチャット・広告制作・RAG 向けベースモデルとして広く採用"],
+      "zh": ["不依赖海外基座的独立从零训练体系，支持免费商业部署", "公开时在同体量开源日语能力评测中保持领先水准"],
+      "en": ["100% from-scratch pre-training under permissive Apache 2.0 license", "Maintained high Japanese NLU & business writing quality at 22B"]
+    },
+    "officialUrl": "https://huggingface.co/cyberagent/calm3-22b-chat",
+    "source": "curated",
+    "aliases": ["calm3", "calm3-22b", "cyberagentlm3"]
+  },
+  {
+    "id": "pfn-plamo-100b",
+    "orgId": "japan",
+    "creator": "PFN",
+    "name": "PLaMo-100B",
+    "releaseDate": "2024-10-10",
+    "releaseMonth": "2024-10",
+    "tier": "flagship",
+    "categories": ["flagship", "open-weights"],
+    "openWeights": true,
+    "contextWindow": "4K",
+    "summary": {
+      "ja": "Preferred Networks が独自MN-Core連携と2兆トークンの日英学習でフルスクラッチ構築した1000億パラメータ国産フラッグシップ。",
+      "zh": "Preferred Networks（PFN）独立从零训练并公开权重的千亿参数日语旗舰 PLaMo-100B。",
+      "en": "Preferred Networks' 100-billion-parameter Japanese foundation model trained completely from scratch on 2T Japanese/English tokens."
+    },
+    "highlights": {
+      "ja": ["日本企業初の100B級フルスクラッチ大規模基盤モデルのウェイト公開", "日本語ネイティブの語彙・表現力と高度な専門知識処理を実現"],
+      "zh": ["日本民间企业率先发布的百亿/千亿级完全自研基础模型", "具备深厚日语文化与产业领域语义表达能力"],
+      "en": ["Landmark 100B scratch-trained sovereign Japanese foundation release", "Showcased PFN's end-to-end domestic pre-training infrastructure"]
+    },
+    "officialUrl": "https://huggingface.co/pfnet/plamo-100b",
+    "source": "curated",
+    "aliases": ["plamo-100b", "plamo 100b"]
+  },
+  {
+    "id": "llm-jp-3-172b",
+    "orgId": "japan",
+    "creator": "LLM-jp",
+    "name": "LLM-jp-3 172B",
+    "releaseDate": "2024-12-24",
+    "releaseMonth": "2024-12",
+    "tier": "flagship",
+    "categories": ["flagship", "open-weights"],
+    "openWeights": true,
+    "contextWindow": "4K",
+    "summary": {
+      "ja": "国立情報学研究所（NII）主導コンソーシアムが全工程・コーパス・評価まで完全オープン（Apache 2.0）で構築した国内最大級172Bモデル。",
+      "zh": "由日本国立情报学研究所（NII）主导、连同语料与训练脚本全部开源（Apache 2.0）的 172B 超级日语旗舰大模型。",
+      "en": "Flagship 172B fully-open Japanese LLM from NII's LLM-jp consortium (Apache 2.0), trained transparently from scratch on 2.1T tokens."
+    },
+    "highlights": {
+      "ja": ["1.8B〜172B まで重み・学習コード・評価基盤を Apache 2.0 で完全公開", "公開時点で世界最大の商用可フルスクラッチオープン日本語モデル"],
+      "zh": ["全尺寸家族均以 Apache 2.0 公开权重、语料清单与评测脚本", "2024 年底日本最大规模的完全透明开源语言模型里程碑"],
+      "en": ["Full Apache 2.0 transparency across weights, data recipes, and evals", "Spanning 1.8B to 172B as Japan's flagship national open LLM"]
+    },
+    "officialUrl": "https://huggingface.co/llm-jp/llm-jp-3-172b-instruct3",
+    "source": "curated",
+    "aliases": ["llm-jp-3", "llm-jp-3-172b", "llm-jp-3.1"]
+  },
+  {
+    "id": "sakana-tinyswallow",
+    "orgId": "japan",
+    "creator": "Sakana AI",
+    "name": "TinySwallow-1.5B",
+    "releaseDate": "2025-01-07",
+    "releaseMonth": "2025-01",
+    "tier": "notable",
+    "categories": ["open-weights", "compact"],
+    "openWeights": true,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "わずか1.5Bパラメータの超小型サイズながら大型日本語モデルの性能に迫り、PC・スマホのブラウザ動作も視野に入れた小型軽量モデル。",
+      "zh": "Sakana AI 推出的仅 1.5B 参数超紧凑开源日语推理助手 TinySwallow，可直接运行于个人电脑乃至手机端浏览器。",
+      "en": "Sakana AI's 1.5B ultra-compact open-weights Japanese LLM distilled to run fast and offline directly on consumer laptops and phones."
+    },
+    "highlights": {
+      "ja": ["1.5B でありながら 32B 未満級モデルと競う高い日本語対話品質を実現", "完全ローカル／WebGPU 実行に適した国産エッジ AI の代表格"],
+      "zh": ["依托数据合成与知识蒸馏，小体积达成不俗日语指令遵循能力", "为日本开发者提供零服务器依赖的开源端侧运行标杆"],
+      "en": ["Punched far above 1.5B weight class via specialized Japanese distillation", "Enabled privacy-first offline & browser WebGPU deployments"]
+    },
+    "officialUrl": "https://huggingface.co/SakanaAI/TinySwallow-1.5B-Instruct",
+    "source": "curated",
+    "aliases": ["tinyswallow", "tinyswallow-1.5b"]
+  },
+  {
+    "id": "rakuten-ai-2",
+    "orgId": "japan",
+    "creator": "Rakuten",
+    "name": "Rakuten AI 2.0",
+    "releaseDate": "2025-02-12",
+    "releaseMonth": "2025-02",
+    "tier": "notable",
+    "categories": ["open-weights"],
+    "openWeights": true,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "楽天初の国産オープンウェイト MoE モデル（8x7B）と日本語専用小型モデル Rakuten AI 2.0 mini（1.5B）を公開。",
+      "zh": "乐天（Rakuten）开源的首个日语混合专家大模型 Rakuten AI 2.0 (8x7B MoE) 及轻量端侧版 2.0 mini (1.5B)。",
+      "en": "Rakuten's open-source Apache 2.0 Japanese 8x7B MoE model paired with the lightweight 1.5B Rakuten AI 2.0 mini."
+    },
+    "highlights": {
+      "ja": ["Apache 2.0 で MoE 版と軽量 1.5B 版の両方を Hugging Face へ公開", "独自日本語データ拡充によりビジネス対話と省計算コストを両立"],
+      "zh": ["以 Apache 2.0 协议同时开放 8x7B MoE 版与 1.5B 端侧小模型", "深度优化日本电商与客服场景的多轮对话表现"],
+      "en": ["Shipped both MoE (8x7B) and mobile (1.5B) editions under Apache 2.0", "Built for high throughput in Japanese commercial deployments"]
+    },
+    "officialUrl": "https://huggingface.co/Rakuten/RakutenAI-2.0-8x7B-instruct",
+    "source": "curated",
+    "aliases": ["rakuten-ai-2.0", "rakuten-ai-2", "rakutenai-2.0"]
+  },
+  {
+    "id": "pfn-plamo-2-1-prime",
+    "orgId": "japan",
+    "creator": "PFN",
+    "name": "PLaMo 2.1 Prime",
+    "releaseDate": "2025-10-08",
+    "releaseMonth": "2025-10",
+    "tier": "notable",
+    "categories": ["reasoning"],
+    "openWeights": false,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "自律ツール呼び出し（Function Calling）と日本語最高水準のビジネス文書生成を備えた PFN 第2世代商用フラッグシップ。",
+      "zh": "PFN 第 2 代商业旗舰升级版 PLaMo 2.1 Prime，重点强化自动工具调用与日本企业级工作流集成。",
+      "en": "Preferred Networks' second-generation commercial Japanese flagship introducing native tool calling and multi-agent workflow support."
+    },
+    "highlights": {
+      "ja": ["外部 API・社内 DB 連携のためのツール利用と高精度日本語を両立", "PLaMo 2.0 論文で国産 8B/31B/100B 世代の設計知見を公開"],
+      "zh": ["加强函数工具调用能力以直接胜任日本企业级智能体协作", "同时推出轻量化 PLaMo 2 系列支撑多端云边部署"],
+      "en": ["Added automated tool use alongside refined Japanese writing", "Backed by the PLaMo 2 technical architecture for enterprise agents"]
+    },
+    "officialUrl": "https://www.preferred.jp/",
+    "source": "curated",
+    "aliases": ["plamo-2.1-prime", "plamo-2", "plamo-2-1-prime"]
+  },
+  {
+    "id": "ntt-tsuzumi-2",
+    "orgId": "japan",
+    "creator": "NTT",
+    "name": "tsuzumi 2",
+    "releaseDate": "2025-10-20",
+    "releaseMonth": "2025-10",
+    "tier": "flagship",
+    "categories": ["flagship", "multimodal", "compact"],
+    "openWeights": false,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "単一 GPU 動作の省計算設計を守りつつ日本語・金融・法務・表グラフ読解を刷新した NTT 第2世代フラッグシップ（約30B）。",
+      "zh": "NTT 2025 年 10 月商用发布的新一代企业级旗舰 tsuzumi 2，延续单卡轻量高效运行并全面跃升日语表格与专业领域水准。",
+      "en": "NTT's second-generation enterprise Japanese flagship (~30B class) running on a single GPU with upgraded chart, financial & legal mastery."
+    },
+    "highlights": {
+      "ja": ["日本語ベンチマークで世界大型機級に迫りつつオンプレ単一GPU運用を維持", "画像・図表・複雑 PDF の構造化読み取り精度を初代から大幅強化"],
+      "zh": ["在金融、法务及医疗等日本行业场景提供高精度低成本推理", "大幅增强跨页面图表理解及企业私有知识库问答可靠性"],
+      "en": ["Maintains single-GPU enterprise deployability with 128K context", "Matched giant closed peers on Japanese professional benchmarks"]
+    },
+    "officialUrl": "https://group.ntt/",
+    "source": "curated",
+    "aliases": ["tsuzumi-2", "tsuzumi 2"]
+  },
+  {
+    "id": "rakuten-ai-3",
+    "orgId": "japan",
+    "creator": "Rakuten",
+    "name": "Rakuten AI 3.0",
+    "releaseDate": "2026-03-17",
+    "releaseMonth": "2026-03",
+    "tier": "flagship",
+    "categories": ["flagship", "open-weights"],
+    "openWeights": true,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "GENIAC 支援下で開発された約 700B 超巨大パラメータ（活性 40B）の MoE 構造を持ち、オープン公開も行われた楽天第3世代旗艦。",
+      "zh": "在 GENIAC 计划支持下由乐天研发的约 700B 总参数（激活 40B）MoE 日本国产旗舰模型 Rakuten AI 3.0。",
+      "en": "Rakuten's ~700B-total (40B-active) GENIAC-backed flagship MoE engineered for Japanese efficiency and open enterprise adoption."
+    },
+    "highlights": {
+      "ja": ["英語基盤比で約 1/3 まで削減された超効率日本語専用トークナイザーを採用", "大規模 MoE と国内データ最適化により高い汎用性と推論コスト低減を達成"],
+      "zh": ["总规模约 700B 参数而推理仅激活约 40B，兼顾顶尖日语理解与低时延", "于 2026 年 3 月正式发布并在 Hugging Face 开放权重"],
+      "en": ["Scaled up to ~700B MoE parameters (40B active) via Japan GENIAC", "Significantly cut Japanese token overhead while matching global baselines"]
+    },
+    "officialUrl": "https://corp.rakuten.co.jp/",
+    "source": "curated",
+    "aliases": ["rakuten-ai-3.0", "rakuten-ai-3", "rakutenai-3.0"]
+  },
+  {
+    "id": "llm-jp-4",
+    "orgId": "japan",
+    "creator": "LLM-jp",
+    "name": "LLM-jp-4",
+    "releaseDate": "2026-04-03",
+    "releaseMonth": "2026-04",
+    "tier": "notable",
+    "categories": ["open-weights", "compact"],
+    "openWeights": true,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "約 12 兆トークンから事前学習された NII 第4世代完全オープン基盤（8B Dense と軽量高効率 32B-A3B MoE、Apache 2.0）。",
+      "zh": "日本 NII 第四代完全开源日语底座 LLM-jp-4（含 8B 稠密及 32B-A3B 轻量 MoE），基于约 12 万亿 Token 从零打造。",
+      "en": "Fourth-generation fully transparent Apache 2.0 Japanese foundation suite from NII trained from scratch on ~12T tokens (8B & 32B-A3B)."
+    },
+    "highlights": {
+      "ja": ["12T トークン学習により前世代 3.1 比でコーディング・知識・推論を全面刷新", "後続の国産各社モデル（ELYZA-Thinking 等）の共通オープン母体として機能"],
+      "zh": ["凭借 12T 语料训练将日语常识与多语言编程提升至新台阶", "成为多家日本本土初创构建垂直思考模型的开源基座"],
+      "en": ["Trained on ~12T corpus with compact 32B-A3B MoE efficiency", "Served immediately as base weights for downstream Japanese RL models"]
+    },
+    "officialUrl": "https://llm-jp.nii.ac.jp/",
+    "source": "curated",
+    "aliases": ["llm-jp-4", "llm-jp-4-8b", "llm-jp-4-32b-a3b"]
+  },
+  {
+    "id": "pfn-plamo-3-prime",
+    "orgId": "japan",
+    "creator": "PFN",
+    "name": "PLaMo 3.0 Prime",
+    "releaseDate": "2026-06-22",
+    "releaseMonth": "2026-06",
+    "tier": "flagship",
+    "categories": ["flagship", "reasoning"],
+    "openWeights": false,
+    "contextWindow": "256K",
+    "summary": {
+      "ja": "ハイブリッド推論（思考モード）と 256K 長文脈を統合し、日本語業務ベンチマークで海外最上位に伍する PFN 第3世代最高峰。",
+      "zh": "Preferred Networks 第三代最高旗舰 PLaMo 3.0 Prime，首次融合深度思考推理模式与 256K 超长上下文。",
+      "en": "Preferred Networks' third-generation flagship unifying standard & Reasoning modes with a 256K context window tuned for Japanese enterprises."
+    },
+    "highlights": {
+      "ja": ["複雑な契約書・技術仕様書を一括処理する 256K コンテキスト＆思考モード搭載", "日本の商習慣・法律・医療・金融を含む国内業務タスクでトップ評価を獲得"],
+      "zh": ["配备 256K 长文档窗口与可切换深思推理（Reasoning）双模式", "针对日本法律、医疗与金融业务规范优化，比肩国际闭源前列"],
+      "en": ["Unifies instant chat & deep Reasoning modes across 256K tokens", "Delivers top-tier enterprise Japanese reliability from scratch"]
+    },
+    "officialUrl": "https://www.preferred.jp/",
+    "source": "curated",
+    "aliases": ["plamo-3.0-prime", "plamo-3-prime", "plamo-3.0"]
+  },
+  {
+    "id": "stockmark-2",
+    "orgId": "japan",
+    "creator": "Stockmark",
+    "name": "Stockmark-2 (100B & VL)",
+    "releaseDate": "2026-07-02",
+    "releaseMonth": "2026-07",
+    "tier": "notable",
+    "categories": ["open-weights", "multimodal", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "日本企業の資料・図表読解に特化し、100B フルスクラッチ LLM と視覚思考型 VLM を同時公開した Stockmark 第2世代。",
+      "zh": "专注于日本商业洞察与复杂资料解读的 Stockmark 第 2 代百亿开源矩阵（100B 文本模型 + 100B VL 视觉推理模型）。",
+      "en": "Stockmark's second-generation 100B from-scratch Japanese business LLM paired with Chain-of-Thought visual model Stockmark-2-VL-100B."
+    },
+    "highlights": {
+      "ja": ["ビジネス文書・決算スライドの図表理解に長けた 100B VLM（CoT 対応）を公開", "GENIAC 成果として Hugging Face 上に重みを広くオープン展開"],
+      "zh": ["同步开源纯文本 100B 与支持思维链图表理解的 100B-VL 视觉模型", "依托 GENIAC 算力支持打造，专攻企业长文档检索与分析"],
+      "en": ["Paired 100B scratch text foundation with CoT visual document VLM", "Openly hosted weights tailored to Japanese corporate intelligence"]
+    },
+    "officialUrl": "https://huggingface.co/stockmark",
+    "source": "curated",
+    "aliases": ["stockmark-2", "stockmark-2-100b", "stockmark-2-vl"]
+  },
+  {
+    "id": "llm-jp-4-1",
+    "orgId": "japan",
+    "creator": "LLM-jp",
+    "name": "LLM-jp-4.1",
+    "releaseDate": "2026-09-28",
+    "releaseMonth": "2026-09",
+    "tier": "flagship",
+    "categories": ["flagship", "open-weights", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "64K",
+    "summary": {
+      "ja": "LLM-jp-4 にネイティブ推論（Thinking）・STEM 強化・ツール利用を組み込んだ NII 最新国産オープンフラッグシップ（Apache 2.0）。",
+      "zh": "日本 NII 在 LLM-jp-4 基础上全面引入原生深度思考（Thinking）、STEM 强化与工具调用的最新开源旗舰 4.1 系列。",
+      "en": "NII consortium's upgraded 4.1 open-weights flagship series adding native Thinking mode, STEM reasoning, and tool calling (Apache 2.0)."
+    },
+    "highlights": {
+      "ja": ["8B・32B-A3B・33B Dense の 3 構成すべてで深思考モードに対応", "フル国産データ由来かつ制限のない商用可推論基盤の新標準を確立"],
+      "zh": ["在 8B、32B-MoE 与 33B 稠密全线支持 Thinking 长思维链推理", "完全透明开源，确立 2026 年日本国产开放推理底座新基准"],
+      "en": ["Brought native CoT thinking across 8B, 32B-A3B MoE & 33B sizes", "Strengthened coding, STEM, and structured function calling under Apache 2.0"]
+    },
+    "officialUrl": "https://llm-jp.nii.ac.jp/",
+    "source": "curated",
+    "aliases": ["llm-jp-4.1", "llm-jp-4-1"]
+  },
+  {
+    "id": "elyza-thinking-1",
+    "orgId": "japan",
+    "creator": "ELYZA",
+    "name": "ELYZA-Thinking-1.0",
+    "releaseDate": "2026-10-02",
+    "releaseMonth": "2026-10",
+    "tier": "notable",
+    "categories": ["open-weights", "reasoning"],
+    "openWeights": true,
+    "contextWindow": "64K",
+    "summary": {
+      "ja": "純国産フルスクラッチ基盤 LLM-jp-4 に ELYZA 独自の思考強化学習（RLVR）を施し論理推論力を飛躍させた最新国産推論モデル。",
+      "zh": "基于纯正日本自研 LLM-jp-4 底座打造、由 ELYZA 运用强化学习激发深层逻辑推理能力的开源思考模型 1.0。",
+      "en": "ELYZA's open Japanese reasoning family post-trained from domestic scratch base LLM-jp-4 (32B-A3B & 33B) with reasoning RL."
+    },
+    "highlights": {
+      "ja": ["海外製基盤に頼らず純国産ベースから推論 RL で大幅スコア向上を実現", "日本語複雑な業務指示や論理パズル・検証作業に強い国産思考モデル"],
+      "zh": ["完全立足日本自研基础模型通过后期推理训练实现显著跃升", "于 2026 年 10 月同步开放 33B 与高效 MoE 版本权重"],
+      "en": ["Demonstrated competitive RL thinking purely atop domestic LLM-jp-4 base weights", "Excelled on complex multi-constraint Japanese enterprise instructions"]
+    },
+    "officialUrl": "https://elyza.ai/",
+    "source": "curated",
+    "aliases": ["elyza-thinking-1.0", "elyza-thinking", "elyza-thinking-1"]
+  },
+  {
+    "id": "sb-sarashina-3",
+    "orgId": "japan",
+    "creator": "SB Intuitions",
+    "name": "Sarashina3",
+    "releaseDate": "2026-10-13",
+    "releaseMonth": "2026-10",
+    "tier": "flagship",
+    "categories": ["flagship", "compact"],
+    "openWeights": false,
+    "contextWindow": "128K",
+    "summary": {
+      "ja": "ソフトバンク系 SB Intuitions が日本語・文化知識に特化して展開した第3世代商用モデル群（Sarashina3 mini/nano 等6種API公開）。",
+      "zh": "软银旗下 SB Intuitions 面向日本市场正式开放免费公测的第三代国产大模型矩阵 Sarashina3 系列（涵盖 mini/nano/翻译等）。",
+      "en": "SB Intuitions' (SoftBank) third-generation Japanese foundation suite launched publicly via web & API (Sarashina3 mini, nano & tools)."
+    },
+    "highlights": {
+      "ja": ["Chat サービスと 6 種特化モデル（mini/nano/翻訳/Guard 等）API を一般公開", "日本の法制度・行政・文化に根ざした高信頼な国産生成 AI 基盤"],
+      "zh": ["公测同时面向开发者提供六款日语垂直与对话模型 API", "深度优化日语习惯表达与合规护栏，服务软银生态及广大企业"],
+      "en": ["Launched public Sarashina Service alongside six specialized API models", "Backed by SoftBank's domestic AI supercomputing infrastructure"]
+    },
+    "officialUrl": "https://www.sbintuitions.co.jp/",
+    "source": "curated",
+    "aliases": ["sarashina3", "sarashina-3", "sarashina"]
+  },
+  {
+    "id": "pfn-plamo-3-translate",
+    "orgId": "japan",
+    "creator": "PFN",
+    "name": "PLaMo 3 Translate",
+    "releaseDate": "2026-11-05",
+    "releaseMonth": "2026-11",
+    "tier": "notable",
+    "categories": ["open-weights", "compact"],
+    "openWeights": true,
+    "contextWindow": "32K",
+    "summary": {
+      "ja": "0.8B〜31B の 4 サイズで 53 言語に対応し、日英・専門技術翻訳をローカルオフラインで最高水準に行う PFN 最新オープンウェイト群。",
+      "zh": "PFN 于 2026 年 11 月在 Hugging Face 开源的多语言专业翻译模型家族（0.8B/2B/8B/31B，覆盖 53 种语言）。",
+      "en": "Preferred Networks' November 2026 open-weights translation model family (0.8B, 2B, 8B, 31B) spanning 53 languages offline."
+    },
+    "highlights": {
+      "ja": ["超軽量 0.8B から高性能 31B まで用途別 4 モデルの重みを Hugging Face 公開", "用語集制御・自然な日本語訳と完全オンプレ・エッジ動作を両立"],
+      "zh": ["以四档参数规格兼顾手机端侧离线翻译与桌面高精度专业笔译", "针对日中英及多语种工业技术文档翻译表现突出"],
+      "en": ["Four open sizes from edge 0.8B to studio 31B on Hugging Face", "Specializes in nuance-preserving Japanese & 53-language translation"]
+    },
+    "officialUrl": "https://huggingface.co/pfnet",
+    "source": "curated",
+    "aliases": ["plamo-3-translate", "plamo 3 translate"]
   }
 ]

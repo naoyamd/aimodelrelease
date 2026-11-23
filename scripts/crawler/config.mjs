@@ -12,8 +12,8 @@ export const OPENROUTER_ORG_MAP = {
   "x-ai": "xai",
   mistralai: "mistral",
   qwen: "qwen",
-  "z-ai": "others",
-  moonshotai: "others",
+  "z-ai": "glm",
+  moonshotai: "kimi",
   minimax: "others",
   bytedance: "others",
   "bytedance-seed": "others",
@@ -26,8 +26,6 @@ export const OPENROUTER_ORG_MAP = {
 };
 
 export const OPENROUTER_CREATOR_MAP = {
-  "z-ai": "Z.ai",
-  moonshotai: "Moonshot",
   minimax: "MiniMax",
   bytedance: "ByteDance",
   "bytedance-seed": "ByteDance",
@@ -78,8 +76,17 @@ export const HUGGINGFACE_ORGS = [
   { author: "Qwen", orgId: "qwen" },
   { author: "mistralai", orgId: "mistral" },
   { author: "google", orgId: "google" },
-  { author: "zai-org", orgId: "others", creator: "Z.ai" },
-  { author: "moonshotai", orgId: "others", creator: "Moonshot" },
+  { author: "zai-org", orgId: "glm" },
+  { author: "moonshotai", orgId: "kimi" },
+  { author: "pfnet", orgId: "japan", creator: "PFN" },
+  { author: "llm-jp", orgId: "japan", creator: "LLM-jp" },
+  { author: "SakanaAI", orgId: "japan", creator: "Sakana AI" },
+  { author: "tokyotech-llm", orgId: "japan", creator: "Swallow" },
+  { author: "sbintuitions", orgId: "japan", creator: "SB Intuitions" },
+  { author: "Rakuten", orgId: "japan", creator: "Rakuten" },
+  { author: "stockmark", orgId: "japan", creator: "Stockmark" },
+  { author: "elyza", orgId: "japan", creator: "ELYZA" },
+  { author: "cyberagent", orgId: "japan", creator: "CyberAgent" },
   { author: "MiniMaxAI", orgId: "others", creator: "MiniMax" },
   { author: "nvidia", orgId: "others", creator: "NVIDIA" },
   { author: "microsoft", orgId: "others", creator: "Microsoft" },
@@ -93,6 +100,8 @@ export const GITHUB_REPOS = [
   { repo: "deepseek-ai/DeepSeek-V3", orgId: "deepseek" },
   { repo: "deepseek-ai/DeepSeek-R1", orgId: "deepseek" },
   { repo: "QwenLM/Qwen3", orgId: "qwen" },
+  { repo: "zai-org/GLM-4", orgId: "glm" },
+  { repo: "MoonshotAI/Kimi-K2", orgId: "kimi" },
 ];
 
 /**

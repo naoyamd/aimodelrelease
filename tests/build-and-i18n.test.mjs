@@ -19,16 +19,39 @@ const execFileAsync = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, "..");
 
-test("curated dataset passes strict schema validation and spans 2022-11 to 2026-11 across all 9 orgs", async () => {
+test("curated dataset passes strict schema validation and spans 2022-11 to 2026-11 across all 12 orgs", async () => {
   const orgs = JSON.parse(await readFile(resolve(ROOT_DIR, "data/orgs.json"), "utf8"));
   const models = JSON.parse(await readFile(resolve(ROOT_DIR, "data/curated-models.json"), "utf8"));
 
-  assert.equal(orgs.length, 9);
-  assert.ok(models.length >= 130);
+  assert.equal(orgs.length, 12);
+  assert.ok(models.length >= 165);
   assert.equal(validateDataset({ orgs, models }), true);
 
+  assert.deepEqual(
+    orgs.filter((o) => o.group === "closed").map((o) => o.id),
+    ["openai", "anthropic", "google", "xai"],
+  );
+  assert.deepEqual(
+    orgs.filter((o) => o.group === "open").map((o) => o.id),
+    ["meta", "deepseek", "mistral", "qwen", "glm", "kimi"],
+  );
+  assert.deepEqual(
+    orgs.filter((o) => o.group === "japan").map((o) => o.id),
+    ["japan"],
+  );
+  assert.deepEqual(
+    orgs.filter((o) => o.group === "others").map((o) => o.id),
+    ["others"],
+  );
+
+  const japanModels = models.filter((m) => m.orgId === "japan");
+  assert.ok(japanModels.length >= 18);
+  for (const m of japanModels) {
+    assert.ok(typeof m.creator === "string" && m.creator.trim().length > 0, `Missing creator on ${m.id}`);
+  }
+
   const othersModels = models.filter((m) => m.orgId === "others");
-  assert.ok(othersModels.length >= 25);
+  assert.ok(othersModels.length >= 18);
   for (const m of othersModels) {
     assert.ok(typeof m.creator === "string" && m.creator.trim().length > 0, `Missing creator on ${m.id}`);
   }

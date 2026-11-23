@@ -210,6 +210,29 @@ function renderMatrix(state, view) {
     if (count > maxMonthTotal) maxMonthTotal = count;
   }
 
+  const groupLabelMap = {
+    closed: t(lang, "groupClosed"),
+    open: t(lang, "groupOpen"),
+    japan: t(lang, "groupJapan"),
+    others: t(lang, "groupOthers"),
+  };
+
+  const groupRuns = [];
+  const boundaryOrgIds = new Set();
+  for (let i = 0; i < view.visibleOrgs.length; i++) {
+    const org = view.visibleOrgs[i];
+    const g = org.group || "others";
+    if (i > 0 && (view.visibleOrgs[i - 1].group || "others") !== g) {
+      boundaryOrgIds.add(org.id);
+    }
+    const lastRun = groupRuns[groupRuns.length - 1];
+    if (lastRun && lastRun.group === g) {
+      lastRun.count += 1;
+    } else {
+      groupRuns.push({ group: g, count: 1 });
+    }
+  }
+
   let lastYear = null;
   const bodyChunks = [];
 
@@ -236,9 +259,10 @@ function renderMatrix(state, view) {
       .map((org) => {
         const palette = getOrgPalette(org);
         const items = view.cellMap.get(`${ym}::${org.id}`) || [];
+        const isBoundary = boundaryOrgIds.has(org.id);
         return `
           <div
-            class="m-cell ${items.length > 0 ? "has-items" : "is-empty"}"
+            class="m-cell ${items.length > 0 ? "has-items" : "is-empty"} ${isBoundary ? "is-group-boundary" : ""}"
             style="--org-ink: ${escapeHtml(palette.ink)}; --org-fg: ${escapeHtml(palette.fg)}"
             data-org="${escapeHtml(org.id)}"
             data-month="${ym}"
@@ -272,38 +296,62 @@ function renderMatrix(state, view) {
   return `
     <div class="m-matrix-scroll-wrap">
       <div class="m-matrix" id="m-matrix" style="${gridColsStyle}">
-        <div class="m-col-header-row" id="m-col-header-row">
-          <div class="m-corner-cell">
-            <span class="m-corner-main">${escapeHtml(t(lang, "cornerCompact"))}</span>
-            <span class="m-corner-sub">${escapeHtml(t(lang, "cornerHint"))}</span>
+        <div class="m-sticky-head" id="m-col-header-row">
+          <div class="m-group-header-row">
+            <div class="m-group-corner">${escapeHtml(t(lang, "groupAxisLabel"))}</div>
+            ${groupRuns
+              .map((run, idx) => {
+                const label = groupLabelMap[run.group] || run.group;
+                return `
+                  <button
+                    type="button"
+                    class="m-group-band is-group-${escapeHtml(run.group)} ${idx > 0 ? "is-group-boundary" : ""}"
+                    style="grid-column: span ${run.count}"
+                    data-solo-group="${escapeHtml(run.group)}"
+                    title="${escapeHtml(t(lang, "soloGroupTooltip", { group: label }))}"
+                  >
+                    <span class="m-group-label">${escapeHtml(label)}</span>
+                    ${run.count > 1 ? `<span class="m-group-span-count">${run.count}</span>` : ""}
+                  </button>
+                `;
+              })
+              .join("")}
           </div>
-          ${view.visibleOrgs
-            .map((org) => {
-              const palette = getOrgPalette(org);
-              const count = view.orgCounts.get(org.id) || 0;
-              const orgName = org.shortName?.[lang] || org.name?.[lang] || org.id;
-              const fullOrgName = org.name?.[lang] || org.id;
-              return `
-                <button
-                  type="button"
-                  class="m-org-head"
-                  data-org="${escapeHtml(org.id)}"
-                  data-solo-org="${escapeHtml(org.id)}"
-                  style="--org-ink: ${escapeHtml(palette.ink)}; --org-fg: ${escapeHtml(palette.fg)}"
-                  title="${escapeHtml(t(lang, "soloOrgTooltip", { org: fullOrgName }))}"
-                >
-                  <div class="m-org-head-top">
-                    <span class="m-org-title">
-                      <span class="m-org-code">${escapeHtml(palette.code)}</span>
-                      <span class="m-org-name">${escapeHtml(orgName)}</span>
-                    </span>
-                    <span class="m-org-count">${count}</span>
-                  </div>
-                  <span class="m-org-tag">${escapeHtml(org.tagline?.[lang] || "")}</span>
-                </button>
-              `;
-            })
-            .join("")}
+
+          <div class="m-col-header-row">
+            <div class="m-corner-cell">
+              <span class="m-corner-main">${escapeHtml(t(lang, "cornerCompact"))}</span>
+              <span class="m-corner-sub">${escapeHtml(t(lang, "cornerHint"))}</span>
+            </div>
+            ${view.visibleOrgs
+              .map((org) => {
+                const palette = getOrgPalette(org);
+                const count = view.orgCounts.get(org.id) || 0;
+                const orgName = org.shortName?.[lang] || org.name?.[lang] || org.id;
+                const fullOrgName = org.name?.[lang] || org.id;
+                const isBoundary = boundaryOrgIds.has(org.id);
+                return `
+                  <button
+                    type="button"
+                    class="m-org-head ${isBoundary ? "is-group-boundary" : ""}"
+                    data-org="${escapeHtml(org.id)}"
+                    data-solo-org="${escapeHtml(org.id)}"
+                    style="--org-ink: ${escapeHtml(palette.ink)}; --org-fg: ${escapeHtml(palette.fg)}"
+                    title="${escapeHtml(t(lang, "soloOrgTooltip", { org: fullOrgName }))}"
+                  >
+                    <div class="m-org-head-top">
+                      <span class="m-org-title">
+                        <span class="m-org-code">${escapeHtml(palette.code)}</span>
+                        <span class="m-org-name">${escapeHtml(orgName)}</span>
+                      </span>
+                      <span class="m-org-count">${count}</span>
+                    </div>
+                    <span class="m-org-tag">${escapeHtml(org.tagline?.[lang] || "")}</span>
+                  </button>
+                `;
+              })
+              .join("")}
+          </div>
         </div>
 
         <div class="m-matrix-body">

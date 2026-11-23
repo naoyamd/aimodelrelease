@@ -141,6 +141,21 @@ async function boot() {
       return;
     }
 
+    const soloGroupBtn = target.closest("[data-solo-group]");
+    if (soloGroupBtn) {
+      const group = soloGroupBtn.getAttribute("data-solo-group");
+      if (!group) return;
+      const outsideIds = state.dataset.orgs
+        .filter((o) => (o.group || "others") !== group)
+        .map((o) => o.id);
+      const alreadySoloGroup =
+        state.hiddenOrgs.size === outsideIds.length &&
+        outsideIds.every((id) => state.hiddenOrgs.has(id));
+      state.hiddenOrgs = alreadySoloGroup ? new Set() : new Set(outsideIds);
+      currentView = renderApp(state);
+      return;
+    }
+
     const soloOrgBtn = target.closest("[data-solo-org]");
     if (soloOrgBtn) {
       const orgId = soloOrgBtn.getAttribute("data-solo-org");
