@@ -101,6 +101,7 @@ export async function mergeModels({
 
       candidateByKey.set(key, {
         ...existing,
+        ...(existing.creator || raw.creator ? { creator: existing.creator || raw.creator } : {}),
         officialUrl: bestUrl,
         contextTokens: Math.max(Number(existing.contextTokens || 0), Number(raw.contextTokens || 0)) || null,
         openWeights: Boolean(existing.openWeights || raw.openWeights),
@@ -139,6 +140,7 @@ export async function mergeModels({
     const record = {
       id: makeUniqueId(cand.canonicalKey, usedIds),
       orgId: cand.orgId,
+      ...(cand.creator ? { creator: cand.creator } : {}),
       name: cand.name,
       releaseDate: cand.releaseDate,
       releaseMonth: cand.releaseDate.slice(0, 7),

@@ -84,6 +84,14 @@ export function validateDataset({ orgs, models }) {
         errors.push(`model ${ref} openWeights must be boolean`);
       }
 
+      if (m?.creator !== undefined && (typeof m.creator !== "string" || !m.creator.trim())) {
+        errors.push(`model ${ref} creator must be a non-empty string when present`);
+      }
+
+      if (m?.orgId === "others" && (typeof m?.creator !== "string" || !m.creator.trim())) {
+        errors.push(`model ${ref} with orgId "others" requires creator attribution`);
+      }
+
       for (const lang of LANGS) {
         if (typeof m?.summary?.[lang] !== "string" || !m.summary[lang].trim()) {
           errors.push(`model ${ref} missing summary.${lang}`);

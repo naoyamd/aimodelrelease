@@ -156,6 +156,7 @@ function renderEntry(model, org, state, view, showOrgHeader = false) {
   const isFlagship = model.tier === "flagship";
   const isNew = view.isRecent(model.releaseDate);
   const isReasoning = model.categories.includes("reasoning");
+  const creatorTag = model.creator ? `<span class="m-creator-tag">${escapeHtml(model.creator)}</span>` : "";
 
   const specs = [];
   if (model.openWeights) specs.push(t(lang, "badgeOpen"));
@@ -174,9 +175,9 @@ function renderEntry(model, org, state, view, showOrgHeader = false) {
         showOrgHeader
           ? `<span class="m-feed-org-tag">
               <span class="m-org-code">${escapeHtml(palette.code)}</span>
-              <span>${escapeHtml(org?.name?.[lang] || model.orgId)}</span>
+              <span>${escapeHtml(org?.name?.[lang] || model.orgId)}${model.creator ? ` · ${escapeHtml(model.creator)}` : ""}</span>
             </span>`
-          : ""
+          : creatorTag
       }
       <div class="m-entry-head">
         <span class="m-entry-name">${escapeHtml(model.name)}</span>
@@ -434,7 +435,7 @@ export function renderDossier(state, view) {
 
     <div class="dossier-content">
       <div class="dossier-org-line">
-        <span class="dossier-org-badge">${escapeHtml(palette.code)} ${escapeHtml(orgName)}</span>
+        <span class="dossier-org-badge">${escapeHtml(palette.code)} ${escapeHtml(orgName)}${model.creator ? ` · ${escapeHtml(model.creator)}` : ""}</span>
         <span class="dossier-tier-label">${escapeHtml(model.tier === "flagship" ? `[${t(lang, "badgeFlagship")}]` : "[NOTABLE]")}</span>
       </div>
 

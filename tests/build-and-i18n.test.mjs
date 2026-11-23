@@ -19,13 +19,19 @@ const execFileAsync = promisify(execFile);
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = resolve(__dirname, "..");
 
-test("curated dataset passes strict schema validation and spans 2022-11 to 2026-11 across all 8 orgs", async () => {
+test("curated dataset passes strict schema validation and spans 2022-11 to 2026-11 across all 9 orgs", async () => {
   const orgs = JSON.parse(await readFile(resolve(ROOT_DIR, "data/orgs.json"), "utf8"));
   const models = JSON.parse(await readFile(resolve(ROOT_DIR, "data/curated-models.json"), "utf8"));
 
-  assert.equal(orgs.length, 8);
-  assert.ok(models.length >= 75);
+  assert.equal(orgs.length, 9);
+  assert.ok(models.length >= 130);
   assert.equal(validateDataset({ orgs, models }), true);
+
+  const othersModels = models.filter((m) => m.orgId === "others");
+  assert.ok(othersModels.length >= 25);
+  for (const m of othersModels) {
+    assert.ok(typeof m.creator === "string" && m.creator.trim().length > 0, `Missing creator on ${m.id}`);
+  }
 
   const coveredOrgs = new Set(models.map((m) => m.orgId));
   for (const org of orgs) {

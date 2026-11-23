@@ -96,6 +96,17 @@ test("notability filter accepts landmark models and rejects noise/quantizations"
   );
   assert.equal(good.accepted, true);
 
+  for (const notable of [
+    { orgId: "openai", name: "gpt-oss-120b", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "mistral", name: "Pixtral Large", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "others", creator: "Moonshot", name: "Kimi K4", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "others", creator: "Z.ai", name: "GLM-5.4", releaseDate: "2026-11-20", sourceType: "openrouter" },
+    { orgId: "others", creator: "Cohere", name: "Command A+", releaseDate: "2026-11-20", sourceType: "openrouter" },
+  ]) {
+    const res = evaluateNotability(notable, { now: NOW });
+    assert.equal(res.accepted, true, `Expected acceptance for ${notable.name}, got ${res.reason}`);
+  }
+
   const noiseCases = [
     { orgId: "meta", name: "Llama-4-Scout-GGUF", releaseDate: "2026-11-20", sourceType: "huggingface", likes: 500 },
     { orgId: "openai", name: "gpt-4o:free", releaseDate: "2026-11-20", sourceType: "openrouter" },
@@ -140,6 +151,14 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
           architecture: { modality: "text+image->text" },
         },
         {
+          id: "moonshotai/kimi-k4",
+          name: "Moonshot: Kimi K4",
+          created: 1795132800,
+          context_length: 262144,
+          description: "Next-gen MoE model",
+          architecture: { modality: "text+image->text" },
+        },
+        {
           id: "some-unknown/model",
           name: "Ignored Org",
           created: 1795132800,
@@ -149,9 +168,12 @@ test("all 4 crawler adapters handle mocked responses and tolerate partial errors
 
   const orRes = await crawlOpenRouter({ fetchFn: mockOpenRouter });
   assert.equal(orRes.ok, true);
-  assert.equal(orRes.candidates.length, 1);
+  assert.equal(orRes.candidates.length, 2);
   assert.equal(orRes.candidates[0].orgId, "openai");
   assert.equal(orRes.candidates[0].name, "GPT-6.5");
+  assert.equal(orRes.candidates[1].orgId, "others");
+  assert.equal(orRes.candidates[1].creator, "Moonshot");
+  assert.equal(orRes.candidates[1].name, "Kimi K4");
 
   const mockRss = async (url) => {
     if (url.includes("anthropic")) return textResponse("Server Error", 500);

@@ -174,5 +174,27 @@
     "color": "#7E22CE",
     "fg": "#FFFFFF",
     "website": "https://qwenlm.github.io/"
+  },
+  {
+    "id": "others",
+    "order": 9,
+    "name": {
+      "ja": "Others (その他主要機関)",
+      "zh": "Others（其他重要机构）",
+      "en": "Others (Notable Labs)"
+    },
+    "shortName": {
+      "ja": "Others",
+      "zh": "Others",
+      "en": "Others"
+    },
+    "tagline": {
+      "ja": "Z.ai・Moonshot・NVIDIA・Microsoft ほか",
+      "zh": "Z.ai・Moonshot・NVIDIA・Microsoft 等",
+      "en": "Z.ai, Moonshot, NVIDIA, Microsoft & more"
+    },
+    "color": "#BE123C",
+    "fg": "#FFFFFF",
+    "website": "https://openrouter.ai/models"
   }
 ]

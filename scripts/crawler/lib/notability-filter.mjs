@@ -8,14 +8,15 @@ const BLOCKLIST_PATTERNS = [
 ];
 
 const ORG_NOTABLE_PATTERNS = {
-  openai: /\b(gpt-[456](?:\.\d+)?(?:\s*(?:o|mini|turbo|astra|sol|luna|terra))?|openai\s+o[134](?:-mini|-pro|-preview)?|o[134](?:-mini|-pro)?|sora(?:\s*\d+)?)\b/i,
+  openai: /\b(gpt-[456](?:\.\d+)?(?:\s*(?:o|mini|turbo|astra|sol|luna|terra))?|gpt-oss(?:-\d+b)?|openai\s+o[134](?:-mini|-pro|-preview)?|o[134](?:-mini|-pro)?|sora(?:\s*\d+)?)\b/i,
   anthropic: /\b(claude[\s-]*(?:opus|sonnet|haiku|mythos|fable)?[\s-]*(?:3(?:\.[57])?|4(?:\.[156])?|5(?:\.[25])?|6(?:\.\d+)?)(?:[\s-]*(?:opus|sonnet|haiku))?|claude[\s-]*(?:opus|sonnet|haiku|mythos|fable)[\s-]*\d+(?:\.\d+)?)\b/i,
   google: /\b(gemini[\s-]*(?:1\.5|2(?:\.[05])?|3(?:\.\d+)?|4(?:\.\d+)?)(?:[\s-]*(?:pro|flash|flash-lite|ultra|live|argon|carbon|hydrogen|neon))?|gemma[\s-]*[234](?:n)?|veo[\s-]*[234]|imagen[\s-]*[34])\b/i,
   meta: /\b(llama[\s-]*[345](?:\.\d+)?(?:[\s-]*(?:scout|maverick|behemoth))?|meta[\s-]*muse|muse[\s-]*(?:wonder|spark|glimmer))\b/i,
   deepseek: /\b(deepseek[\s-]*(?:v[234](?:\.\d+)?|r[12]|coder-v2)(?:[\s-]*(?:pro|flash|lite|speciale|exp))?)\b/i,
   xai: /\b(grok[\s-]*(?:1\.5|2|3|4(?:\.\d+)?|5(?:\.\d+)?|voice[\s-]*\d(?:\.\d+)?)(?:[\s-]*(?:mini|heavy|fast))?)\b/i,
-  mistral: /\b(mistral[\s-]*(?:large|medium|small)[\s-]*[2345]?|mixtral[\s-]*8x(?:7|22)b|codestral|devstral|magistral|voxtral(?:\s*[23])?|leanstral)\b/i,
+  mistral: /\b(mistral[\s-]*(?:large|medium|small)[\s-]*[2345]?|mixtral[\s-]*8x(?:7|22)b|pixtral(?:\s*large)?|codestral|devstral|magistral|voxtral(?:\s*[23])?|leanstral)\b/i,
   qwen: /\b(qwen[\s-]*[234](?:\.\d+)?(?:[\s-]*(?:max|plus|turbo|coder|vl|omni|next|235b|2\.4t|27b|32b|72b))?|qwq[\s-]*(?:32b|\d+b)|qvq[\s-]*\d+b)\b/i,
+  others: /(?:^|[^a-z0-9])(?:glm[\s-]*(?:4\.\d+|5(?:\.\d+)?|z1)|kimi[\s-]*k[2345](?:\.\d+)?|minimax[\s-]*m[1234](?:\.\d+)?|seed[\s-]*[23](?:\.\d+)?|nemotron[\s-]*[345](?:[\s-]*(?:nano|super|ultra))?|phi[\s-]*[345]|command[\s-]*(?:r(?:\+|-plus)?|a(?:\+|-plus)?)|amazon[\s-]*nova|nova[\s-]*(?:micro|lite|pro|premier)|flux[\s.]*[123]|olmo[\s-]*[234])(?![a-z0-9])/i,
 };
 
 const RSS_RELEASE_CUE_RE = /\b(introduc|announc|releas|launch|unveil|availab|new model|open[- ]?weights?|preview|introducing|now available|rolling out)\b/i;

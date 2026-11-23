@@ -34,9 +34,9 @@ export const UI_TEXT = {
   ja: {
     pageTitle: "AI Model Release Radar — 主要AIモデルの月別リリース年表",
     pageDescription:
-      "OpenAI・Anthropic・Google・Meta・DeepSeek・xAI・Mistral・Qwenなど著名AIモデルのリリース履歴を、企業×月別マトリクスで一覧できるデイリー自動更新サイト。",
+      "OpenAI・Anthropic・Google・Meta・DeepSeek・xAI・Mistral・Qwen・Othersなど著名AIモデルのリリース履歴を、企業×月別マトリクスで一覧できるデイリー自動更新サイト。",
     brandTitle: "AI MODEL RELEASE RADAR",
-    brandSubtitle: "8機関 × 月次リリース時刻表（毎日自動更新）",
+    brandSubtitle: "主要8機関＋Others × 月次リリース時刻表（毎日自動更新）",
     liveBadge: "毎日自動更新",
     lastUpdated: "最終確認: {date}",
     kpiModels: "掲載モデル",
@@ -94,9 +94,9 @@ export const UI_TEXT = {
   zh: {
     pageTitle: "AI Model Release Radar — 全球著名 AI 模型月度发布矩阵",
     pageDescription:
-      "按机构横向对比、按月份纵向回溯，每日自动追踪 OpenAI、Anthropic、Google、Meta、DeepSeek、xAI、Mistral、Qwen 著名大模型发布动态。",
+      "按机构横向对比、按月份纵向回溯，每日自动追踪 OpenAI、Anthropic、Google、Meta、DeepSeek、xAI、Mistral、Qwen 及 Others 等著名大模型发布动态。",
     brandTitle: "AI MODEL RELEASE RADAR",
-    brandSubtitle: "8 大机构 × 月度发布时刻表（每日自动更新）",
+    brandSubtitle: "核心8大机构＋Others × 月度发布时刻表（每日自动更新）",
     liveBadge: "每日自动更新",
     lastUpdated: "上次检查: {date}",
     kpiModels: "收录模型",
@@ -154,9 +154,9 @@ export const UI_TEXT = {
   en: {
     pageTitle: "AI Model Release Radar — Notable AI Models by Org & Month",
     pageDescription:
-      "A crisp, daily-updated single-page release matrix of notable AI models across OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI, Mistral, and Qwen.",
+      "A crisp, daily-updated single-page release matrix of notable AI models across OpenAI, Anthropic, Google DeepMind, Meta, DeepSeek, xAI, Mistral, Qwen, and Others.",
     brandTitle: "AI MODEL RELEASE RADAR",
-    brandSubtitle: "8-LAB MONTHLY RELEASE TIMETABLE · DAILY AUTO-UPDATED",
+    brandSubtitle: "8 LABS + OTHERS · MONTHLY RELEASE TIMETABLE · DAILY AUTO-UPDATED",
     liveBadge: "Daily Auto-Updated",
     lastUpdated: "Checked {date}",
     kpiModels: "Models",

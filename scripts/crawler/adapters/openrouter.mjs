@@ -1,4 +1,9 @@
-import { OPENROUTER_ORG_MAP, OPENROUTER_URL, fetchWithTimeout } from "../config.mjs";
+import {
+  OPENROUTER_CREATOR_MAP,
+  OPENROUTER_ORG_MAP,
+  OPENROUTER_URL,
+  fetchWithTimeout,
+} from "../config.mjs";
 import { cleanDisplayName, toIsoDate } from "../lib/normalizer.mjs";
 
 /**
@@ -37,8 +42,11 @@ export async function crawlOpenRouter({ fetchFn = globalThis.fetch, url = OPENRO
       const name = cleanDisplayName(rawName);
       if (!name) continue;
 
+      const creator = OPENROUTER_CREATOR_MAP[prefix];
+
       candidates.push({
         orgId,
+        ...(creator ? { creator } : {}),
         name,
         releaseDate: dateObj.releaseDate,
         releaseMonth: dateObj.releaseMonth,

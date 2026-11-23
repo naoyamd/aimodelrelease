@@ -61,6 +61,7 @@ export function selectViewData(state) {
       const org = orgMap.get(m.orgId);
       const haystack = [
         m.name,
+        m.creator || "",
         m.releaseDate,
         ...(m.aliases || []),
         org?.name?.ja || "",

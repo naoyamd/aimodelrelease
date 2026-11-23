@@ -12,6 +12,31 @@ export const OPENROUTER_ORG_MAP = {
   "x-ai": "xai",
   mistralai: "mistral",
   qwen: "qwen",
+  "z-ai": "others",
+  moonshotai: "others",
+  minimax: "others",
+  bytedance: "others",
+  "bytedance-seed": "others",
+  nvidia: "others",
+  microsoft: "others",
+  cohere: "others",
+  amazon: "others",
+  "black-forest-labs": "others",
+  allenai: "others",
+};
+
+export const OPENROUTER_CREATOR_MAP = {
+  "z-ai": "Z.ai",
+  moonshotai: "Moonshot",
+  minimax: "MiniMax",
+  bytedance: "ByteDance",
+  "bytedance-seed": "ByteDance",
+  nvidia: "NVIDIA",
+  microsoft: "Microsoft",
+  cohere: "Cohere",
+  amazon: "Amazon",
+  "black-forest-labs": "BFL",
+  allenai: "AllenAI",
 };
 
 export const RSS_FEEDS = [
@@ -53,6 +78,14 @@ export const HUGGINGFACE_ORGS = [
   { author: "Qwen", orgId: "qwen" },
   { author: "mistralai", orgId: "mistral" },
   { author: "google", orgId: "google" },
+  { author: "zai-org", orgId: "others", creator: "Z.ai" },
+  { author: "moonshotai", orgId: "others", creator: "Moonshot" },
+  { author: "MiniMaxAI", orgId: "others", creator: "MiniMax" },
+  { author: "nvidia", orgId: "others", creator: "NVIDIA" },
+  { author: "microsoft", orgId: "others", creator: "Microsoft" },
+  { author: "CohereLabs", orgId: "others", creator: "Cohere" },
+  { author: "black-forest-labs", orgId: "others", creator: "BFL" },
+  { author: "allenai", orgId: "others", creator: "AllenAI" },
 ];
 
 export const GITHUB_REPOS = [

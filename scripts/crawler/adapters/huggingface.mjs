@@ -9,7 +9,7 @@ export async function crawlHuggingFace({
   orgs = HUGGINGFACE_ORGS,
 } = {}) {
   const results = await Promise.allSettled(
-    orgs.map(async ({ author, orgId }) => {
+    orgs.map(async ({ author, orgId, creator }) => {
       const apiUrl = `https://huggingface.co/api/models?author=${encodeURIComponent(author)}&sort=createdAt&direction=-1&limit=35`;
       const resp = await fetchWithTimeout(apiUrl, {}, fetchFn);
       if (!resp.ok) {
@@ -35,6 +35,7 @@ export async function crawlHuggingFace({
 
         items.push({
           orgId,
+          ...(creator ? { creator } : {}),
           name,
           releaseDate: dateObj.releaseDate,
           releaseMonth: dateObj.releaseMonth,

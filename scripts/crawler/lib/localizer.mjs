@@ -8,9 +8,9 @@ function cleanSentence(text, maxLen = 170) {
 }
 
 function buildDeterministicLocalization(candidate, org) {
-  const orgJa = org?.name?.ja || candidate.orgId;
-  const orgZh = org?.name?.zh || candidate.orgId;
-  const orgEn = org?.name?.en || candidate.orgId;
+  const orgJa = candidate.creator || org?.name?.ja || candidate.orgId;
+  const orgZh = candidate.creator || org?.name?.zh || candidate.orgId;
+  const orgEn = candidate.creator || org?.name?.en || candidate.orgId;
   const isOpen = Boolean(candidate.openWeights);
   const ctx = candidate.contextWindow;
   const isReasoning = candidate.categories?.includes("reasoning");
@@ -87,7 +87,7 @@ export async function localizeCandidate(
     const prompt = [
       "Return ONLY valid JSON with keys summary {ja, zh, en} and highlights {ja, zh, en} (arrays of 2 short strings each).",
       `Model: ${candidate.name}`,
-      `Organization: ${org?.name?.en || candidate.orgId}`,
+      `Organization: ${candidate.creator || org?.name?.en || candidate.orgId}`,
       `Date: ${candidate.releaseDate}`,
       `Context: ${candidate.contextWindow || "unknown"}`,
       `Description: ${cleanSentence(candidate.description || "", 300)}`,
