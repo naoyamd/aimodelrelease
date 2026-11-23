@@ -1,0 +1,17 @@
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #f7f7f7;
+  --bg-hover: #efefef;
+  --ink: #0a0a0a;
+  --ink-mid: #3a3a3a;
+  --ink-dim: #666666;
+  --signal: #ff3b00;
+  --border-heavy: #0a0a0a;
+  --border-light: #d4d4d4;
+  --invert-bg: #0a0a0a;
+  --invert-fg: #ffffff;
+  --backdrop: rgba(10, 10, 10, 0.44);
+
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Space Grotesk", "Noto Sans JP", "Noto Sans SC", system-ui, sans-serif;
+}

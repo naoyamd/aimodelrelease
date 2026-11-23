@@ -1,0 +1,178 @@
+[
+  {
+    "id": "openai",
+    "order": 1,
+    "name": {
+      "ja": "OpenAI",
+      "zh": "OpenAI",
+      "en": "OpenAI"
+    },
+    "shortName": {
+      "ja": "OpenAI",
+      "zh": "OpenAI",
+      "en": "OpenAI"
+    },
+    "tagline": {
+      "ja": "GPT・推論 o シリーズ",
+      "zh": "GPT 与 o 系列推理模型",
+      "en": "GPT & o-series reasoning"
+    },
+    "color": "#00875A",
+    "fg": "#FFFFFF",
+    "website": "https://openai.com/news/"
+  },
+  {
+    "id": "anthropic",
+    "order": 2,
+    "name": {
+      "ja": "Anthropic",
+      "zh": "Anthropic",
+      "en": "Anthropic"
+    },
+    "shortName": {
+      "ja": "Anthropic",
+      "zh": "Anthropic",
+      "en": "Anthropic"
+    },
+    "tagline": {
+      "ja": "Claude ファミリー",
+      "zh": "Claude 系列模型",
+      "en": "Claude family & coding"
+    },
+    "color": "#C2410C",
+    "fg": "#FFFFFF",
+    "website": "https://www.anthropic.com/news"
+  },
+  {
+    "id": "google",
+    "order": 3,
+    "name": {
+      "ja": "Google DeepMind",
+      "zh": "Google DeepMind",
+      "en": "Google DeepMind"
+    },
+    "shortName": {
+      "ja": "Google",
+      "zh": "Google",
+      "en": "Google"
+    },
+    "tagline": {
+      "ja": "Gemini & Gemma",
+      "zh": "Gemini 与 Gemma 系列",
+      "en": "Gemini & open Gemma"
+    },
+    "color": "#1D4ED8",
+    "fg": "#FFFFFF",
+    "website": "https://deepmind.google/blog/"
+  },
+  {
+    "id": "meta",
+    "order": 4,
+    "name": {
+      "ja": "Meta",
+      "zh": "Meta",
+      "en": "Meta"
+    },
+    "shortName": {
+      "ja": "Meta",
+      "zh": "Meta",
+      "en": "Meta"
+    },
+    "tagline": {
+      "ja": "Llama & Muse オープン系",
+      "zh": "Llama 与 Muse 开放权重",
+      "en": "Llama & Muse ecosystem"
+    },
+    "color": "#0E7490",
+    "fg": "#FFFFFF",
+    "website": "https://ai.meta.com/blog/"
+  },
+  {
+    "id": "deepseek",
+    "order": 5,
+    "name": {
+      "ja": "DeepSeek",
+      "zh": "DeepSeek",
+      "en": "DeepSeek"
+    },
+    "shortName": {
+      "ja": "DeepSeek",
+      "zh": "DeepSeek",
+      "en": "DeepSeek"
+    },
+    "tagline": {
+      "ja": "高効率 MoE・推論モデル",
+      "zh": "高性价比 MoE 与推理模型",
+      "en": "Open MoE & RL reasoning"
+    },
+    "color": "#4338CA",
+    "fg": "#FFFFFF",
+    "website": "https://www.deepseek.com/"
+  },
+  {
+    "id": "xai",
+    "order": 6,
+    "name": {
+      "ja": "xAI",
+      "zh": "xAI",
+      "en": "xAI"
+    },
+    "shortName": {
+      "ja": "xAI",
+      "zh": "xAI",
+      "en": "xAI"
+    },
+    "tagline": {
+      "ja": "Grok フロンティア群",
+      "zh": "Grok 前沿大模型",
+      "en": "Grok frontier series"
+    },
+    "color": "#18181B",
+    "fg": "#FFFFFF",
+    "website": "https://x.ai/news"
+  },
+  {
+    "id": "mistral",
+    "order": 7,
+    "name": {
+      "ja": "Mistral AI",
+      "zh": "Mistral AI",
+      "en": "Mistral AI"
+    },
+    "shortName": {
+      "ja": "Mistral",
+      "zh": "Mistral",
+      "en": "Mistral"
+    },
+    "tagline": {
+      "ja": "欧州発オープン＆実用群",
+      "zh": "欧洲前沿开源与商用模型",
+      "en": "European open & frontier"
+    },
+    "color": "#B45309",
+    "fg": "#FFFFFF",
+    "website": "https://mistral.ai/news"
+  },
+  {
+    "id": "qwen",
+    "order": 8,
+    "name": {
+      "ja": "Alibaba Qwen",
+      "zh": "阿里通义千问 Qwen",
+      "en": "Alibaba Qwen"
+    },
+    "shortName": {
+      "ja": "Qwen",
+      "zh": "Qwen",
+      "en": "Qwen"
+    },
+    "tagline": {
+      "ja": "多言語・マルチモーダル",
+      "zh": "多语言与全模态千问系列",
+      "en": "Multilingual & MoE leader"
+    },
+    "color": "#7E22CE",
+    "fg": "#FFFFFF",
+    "website": "https://qwenlm.github.io/"
+  }
+]

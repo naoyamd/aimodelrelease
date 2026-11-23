@@ -1,0 +1,18 @@
+{
+  "name": "ai-model-release",
+  "version": "1.0.0",
+  "description": "Single-page chronological matrix of notable AI model releases with JA/ZH/EN support and a custom daily crawler.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "crawl": "node scripts/crawler/crawl.mjs",
+    "crawl:dry": "node scripts/crawler/crawl.mjs --dry-run",
+    "crawl:offline": "node scripts/crawler/crawl.mjs --offline",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

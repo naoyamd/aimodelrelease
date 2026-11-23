@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Model Release Radar — 主要AIモデルの月別リリース年表</title>
+  <meta name="description" content="OpenAI・Anthropic・Google・Meta・DeepSeek・xAI・Mistral・Qwenなど著名AIモデルのリリース履歴を、企業×月別マトリクスで一覧できるデイリー自動更新サイト。">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="icon" type="image/svg+xml" href="./assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <section class="controls-bar" id="controls-bar" aria-label="Filters and Navigation"></section>
+  <main class="main-stage" id="main-stage">
+    <div id="loading-state" class="m-empty" role="status">LOADING TIMETABLE…</div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <div id="dossier-backdrop" class="dossier-backdrop" hidden></div>
+  <aside id="dossier-drawer" class="dossier-drawer" aria-hidden="true" aria-label="Model Dossier"></aside>
+
+  <!-- Offline/file:// fallback data bundle generated at build time -->
+  <script src="./data/releases.js" defer></script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

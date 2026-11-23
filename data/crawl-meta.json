@@ -1,0 +1,39 @@
+{
+  "lastCrawledAt": "2026-11-23T22:37:45.154Z",
+  "mode": "offline-sync",
+  "curatedCount": 101,
+  "crawledCount": 0,
+  "totalCount": 101,
+  "addedCount": 0,
+  "skippedCount": 0,
+  "sources": [
+    {
+      "source": "openrouter",
+      "ok": true,
+      "mode": "offline",
+      "fetchedCount": 0,
+      "candidatesCount": 0
+    },
+    {
+      "source": "rss",
+      "ok": true,
+      "mode": "offline",
+      "fetchedCount": 0,
+      "candidatesCount": 0
+    },
+    {
+      "source": "huggingface",
+      "ok": true,
+      "mode": "offline",
+      "fetchedCount": 0,
+      "candidatesCount": 0
+    },
+    {
+      "source": "github",
+      "ok": true,
+      "mode": "offline",
+      "fetchedCount": 0,
+      "candidatesCount": 0
+    }
+  ]
+}
