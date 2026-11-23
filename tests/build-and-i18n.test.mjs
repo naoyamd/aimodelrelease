@@ -118,12 +118,16 @@ test("offline crawl and static build emit complete GitHub Pages dist/ with relat
     "dist/data/releases.json",
     "dist/data/releases.js",
     "dist/.nojekyll",
+    "dist/CNAME",
   ];
 
   for (const rel of expectedOutputs) {
     const info = await stat(resolve(ROOT_DIR, rel));
     assert.ok(info.isFile(), `Expected output file missing: ${rel}`);
   }
+
+  const cname = (await readFile(resolve(ROOT_DIR, "dist/CNAME"), "utf8")).trim();
+  assert.equal(cname, "model.nightly.dedyn.io");
 
   const indexHtml = await readFile(resolve(ROOT_DIR, "dist/index.html"), "utf8");
   assert.ok(!indexHtml.includes('href="/styles/'), "Found non-relative /styles/ path in index.html");

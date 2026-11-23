@@ -60,6 +60,7 @@ async function main() {
   await writeFile(resolve(distDataDir, "releases.json"), jsonContent, "utf8");
   await writeFile(resolve(distDataDir, "releases.js"), jsFallbackContent, "utf8");
   await writeFile(resolve(DIST_DIR, ".nojekyll"), "", "utf8");
+  await cp(resolve(ROOT_DIR, "CNAME"), resolve(DIST_DIR, "CNAME"));
 
   const criticalFiles = [
     "index.html",
@@ -74,6 +75,7 @@ async function main() {
     "data/releases.json",
     "data/releases.js",
     ".nojekyll",
+    "CNAME",
   ];
 
   let totalBytes = 0;
