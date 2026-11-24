@@ -115,6 +115,8 @@ test("offline crawl and static build emit complete GitHub Pages dist/ with relat
     "dist/js/app.js",
     "dist/js/i18n.js",
     "dist/assets/icon.svg",
+    "dist/assets/ogp.png",
+    "dist/assets/apple-touch-icon.png",
     "dist/data/releases.json",
     "dist/data/releases.js",
     "dist/.nojekyll",
@@ -126,6 +128,15 @@ test("offline crawl and static build emit complete GitHub Pages dist/ with relat
     assert.ok(info.isFile(), `Expected output file missing: ${rel}`);
   }
 
+  const pngMagic = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+  const readPngSize = async (rel) => {
+    const buf = await readFile(resolve(ROOT_DIR, rel));
+    assert.ok(buf.length >= 24 && buf.subarray(0, 8).equals(pngMagic), `Invalid PNG magic in ${rel}`);
+    return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+  };
+  assert.deepEqual(await readPngSize("dist/assets/ogp.png"), { width: 1200, height: 630 });
+  assert.deepEqual(await readPngSize("dist/assets/apple-touch-icon.png"), { width: 180, height: 180 });
+
   const cname = (await readFile(resolve(ROOT_DIR, "dist/CNAME"), "utf8")).trim();
   assert.equal(cname, "model.nightly.dedyn.io");
 
@@ -134,4 +145,12 @@ test("offline crawl and static build emit complete GitHub Pages dist/ with relat
   assert.ok(!indexHtml.includes('src="/js/'), "Found non-relative /js/ path in index.html");
   assert.ok(indexHtml.includes('href="./styles/main.css"'));
   assert.ok(indexHtml.includes('src="./js/app.js"'));
+  assert.ok(indexHtml.includes('rel="canonical" href="https://model.nightly.dedyn.io/"'));
+  assert.ok(indexHtml.includes('rel="apple-touch-icon"'));
+  assert.ok(indexHtml.includes('property="og:url" content="https://model.nightly.dedyn.io/"'));
+  assert.ok(indexHtml.includes('property="og:image" content="https://model.nightly.dedyn.io/assets/ogp.png"'));
+  assert.ok(indexHtml.includes('property="og:image:width" content="1200"'));
+  assert.ok(indexHtml.includes('property="og:image:height" content="630"'));
+  assert.ok(indexHtml.includes('name="twitter:card" content="summary_large_image"'));
+  assert.ok(indexHtml.includes('name="twitter:image" content="https://model.nightly.dedyn.io/assets/ogp.png"'));
 });

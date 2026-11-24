@@ -72,6 +72,8 @@ async function main() {
     "js/state.js",
     "js/render.js",
     "assets/icon.svg",
+    "assets/ogp.png",
+    "assets/apple-touch-icon.png",
     "data/releases.json",
     "data/releases.js",
     ".nojekyll",
