@@ -1,33 +1,33 @@
 {
-  "lastCrawledAt": "2026-11-24T12:05:46.934Z",
+  "lastCrawledAt": "2026-11-25T10:56:25.839Z",
   "mode": "live-crawl",
   "curatedCount": 169,
   "crawledCount": 414,
   "totalCount": 583,
-  "addedCount": 414,
-  "skippedCount": 2419,
+  "addedCount": 0,
+  "skippedCount": 2868,
   "sources": [
     {
       "source": "openrouter",
       "ok": true,
       "mode": "live",
-      "fetchedCount": 473,
-      "candidatesCount": 343
+      "fetchedCount": 472,
+      "candidatesCount": 341
     },
     {
       "source": "rss",
       "ok": true,
       "mode": "live",
-      "fetchedCount": 1835,
-      "candidatesCount": 1835,
+      "fetchedCount": 1840,
+      "candidatesCount": 1840,
       "error": "mistral-news-mirror: HTTP 404"
     },
     {
       "source": "huggingface",
       "ok": true,
       "mode": "live",
-      "fetchedCount": 680,
-      "candidatesCount": 680
+      "fetchedCount": 681,
+      "candidatesCount": 681
     },
     {
       "source": "github",
