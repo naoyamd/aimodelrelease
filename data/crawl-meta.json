@@ -1,18 +1,18 @@
 {
-  "lastCrawledAt": "2026-11-25T10:56:25.839Z",
+  "lastCrawledAt": "2026-11-26T10:32:18.262Z",
   "mode": "live-crawl",
   "curatedCount": 169,
-  "crawledCount": 414,
-  "totalCount": 583,
-  "addedCount": 0,
-  "skippedCount": 2868,
+  "crawledCount": 417,
+  "totalCount": 586,
+  "addedCount": 3,
+  "skippedCount": 2869,
   "sources": [
     {
       "source": "openrouter",
       "ok": true,
       "mode": "live",
-      "fetchedCount": 472,
-      "candidatesCount": 341
+      "fetchedCount": 474,
+      "candidatesCount": 345
     },
     {
       "source": "rss",

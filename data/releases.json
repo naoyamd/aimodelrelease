@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-25T10:56:25.839Z",
+  "generatedAt": "2026-11-26T10:32:18.262Z",
   "meta": {
-    "lastCrawledAt": "2026-11-25T10:56:25.839Z",
+    "lastCrawledAt": "2026-11-26T10:32:18.262Z",
     "mode": "live-crawl",
     "curatedCount": 169,
-    "crawledCount": 414,
-    "totalCount": 583,
-    "addedCount": 0,
-    "skippedCount": 2868,
+    "crawledCount": 417,
+    "totalCount": 586,
+    "addedCount": 3,
+    "skippedCount": 2869,
     "sources": [
       {
         "source": "openrouter",
         "ok": true,
         "mode": "live",
-        "fetchedCount": 472,
-        "candidatesCount": 341
+        "fetchedCount": 474,
+        "candidatesCount": 345
       },
       {
         "source": "rss",
@@ -9682,6 +9682,46 @@
       ]
     },
     {
+      "id": "mistral-mistral-small-4-batch",
+      "orgId": "mistral",
+      "name": "Mistral Small 4 (batch)",
+      "releaseDate": "2026-03-16",
+      "releaseMonth": "2026-03",
+      "tier": "notable",
+      "categories": [
+        "reasoning",
+        "multimodal",
+        "compact"
+      ],
+      "openWeights": false,
+      "contextWindow": "256K",
+      "summary": {
+        "ja": "Mistral AIが公開したMistral Small 4 (batch)（主要アップデートモデル・クラウド/API展開・高度推論対応）。",
+        "zh": "Mistral AI发布的 Mistral Small 4 (batch)，重要版本更新、云端 API 服务、支持深度推理。",
+        "en": "Mistral Small 4 (batch) by Mistral AI: Mistral Small 4 is the next major release in the Mistral Small family, unifying the capabilities of several flagship Mistral models into a single sys…"
+      },
+      "highlights": {
+        "ja": [
+          "2026-03-16 公開（自動クロール検知: OpenRouter API）",
+          "主要アップデートモデル / クラウド/API展開 / 高度推論対応 / マルチモーダル対応 / 最大256Kコンテキスト"
+        ],
+        "zh": [
+          "发布于 2026-03-16（每日自动抓取收录）",
+          "重要版本更新 / 云端 API 服务 / 支持深度推理 / 多模态理解 / 支持 256K 上下文"
+        ],
+        "en": [
+          "Released 2026-03-16 (auto-tracked via OpenRouter API)",
+          "Notable release · API / cloud release · advanced reasoning · multimodal · 256K context window"
+        ]
+      },
+      "officialUrl": "https://openrouter.ai/models/mistralai/mistral-small-2603:batch",
+      "source": "crawled",
+      "discoveredFrom": "OpenRouter API",
+      "aliases": [
+        "mistral small 4 (batch)"
+      ]
+    },
+    {
       "id": "glm-z-ai-glm-5-turbo",
       "orgId": "glm",
       "name": "Z.ai: GLM 5 Turbo",
@@ -12970,6 +13010,46 @@
       ]
     },
     {
+      "id": "mistral-mistral-large-3-2512-batch",
+      "orgId": "mistral",
+      "name": "Mistral Large 3 2512 (batch)",
+      "releaseDate": "2025-12-01",
+      "releaseMonth": "2025-12",
+      "tier": "flagship",
+      "categories": [
+        "flagship",
+        "open-weights",
+        "multimodal"
+      ],
+      "openWeights": true,
+      "contextWindow": "256K",
+      "summary": {
+        "ja": "Mistral AIが公開したMistral Large 3 2512 (batch)（フラッグシップ世代モデル・オープンウェイト公開・マルチモーダル対応）。",
+        "zh": "Mistral AI发布的 Mistral Large 3 2512 (batch)，新一代旗舰模型、开放权重开源、多模态理解。",
+        "en": "Mistral Large 3 2512 (batch) by Mistral AI: Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B tot…"
+      },
+      "highlights": {
+        "ja": [
+          "2025-12-01 公開（自動クロール検知: OpenRouter API）",
+          "フラッグシップ世代モデル / オープンウェイト公開 / マルチモーダル対応 / 最大256Kコンテキスト"
+        ],
+        "zh": [
+          "发布于 2025-12-01（每日自动抓取收录）",
+          "新一代旗舰模型 / 开放权重开源 / 多模态理解 / 支持 256K 上下文"
+        ],
+        "en": [
+          "Released 2025-12-01 (auto-tracked via OpenRouter API)",
+          "Flagship release · open-weights · multimodal · 256K context window"
+        ]
+      },
+      "officialUrl": "https://openrouter.ai/models/mistralai/mistral-large-2512:batch",
+      "source": "crawled",
+      "discoveredFrom": "OpenRouter API",
+      "aliases": [
+        "mistral large 3 2512 (batch)"
+      ]
+    },
+    {
       "id": "mistral-mistral-large-3-675b-instruct-2512",
       "orgId": "mistral",
       "name": "Mistral-Large-3-675B-Instruct-2512",
@@ -15948,6 +16028,44 @@
       "discoveredFrom": "OpenRouter API",
       "aliases": [
         "codestral 2508"
+      ]
+    },
+    {
+      "id": "mistral-codestral-2508-batch",
+      "orgId": "mistral",
+      "name": "Codestral 2508 (batch)",
+      "releaseDate": "2025-08-01",
+      "releaseMonth": "2025-08",
+      "tier": "notable",
+      "categories": [
+        "open-weights"
+      ],
+      "openWeights": true,
+      "contextWindow": "256K",
+      "summary": {
+        "ja": "Mistral AIが公開したCodestral 2508 (batch)（主要アップデートモデル・オープンウェイト公開・最大256Kコンテキスト）。",
+        "zh": "Mistral AI发布的 Codestral 2508 (batch)，重要版本更新、开放权重开源、支持 256K 上下文。",
+        "en": "Codestral 2508 (batch) by Mistral AI: Mistral's cutting-edge language model for coding released end of July 2025. Codestral specializes in low-latency, high-frequency tasks such as fill-i…"
+      },
+      "highlights": {
+        "ja": [
+          "2025-08-01 公開（自動クロール検知: OpenRouter API）",
+          "主要アップデートモデル / オープンウェイト公開 / 最大256Kコンテキスト"
+        ],
+        "zh": [
+          "发布于 2025-08-01（每日自动抓取收录）",
+          "重要版本更新 / 开放权重开源 / 支持 256K 上下文"
+        ],
+        "en": [
+          "Released 2025-08-01 (auto-tracked via OpenRouter API)",
+          "Notable release · open-weights · 256K context window"
+        ]
+      },
+      "officialUrl": "https://openrouter.ai/models/mistralai/codestral-2508:batch",
+      "source": "crawled",
+      "discoveredFrom": "OpenRouter API",
+      "aliases": [
+        "codestral 2508 (batch)"
       ]
     },
     {
