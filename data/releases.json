@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-11-26T10:32:18.262Z",
+  "generatedAt": "2026-11-27T10:36:45.101Z",
   "meta": {
-    "lastCrawledAt": "2026-11-26T10:32:18.262Z",
+    "lastCrawledAt": "2026-11-27T10:36:45.101Z",
     "mode": "live-crawl",
     "curatedCount": 169,
-    "crawledCount": 417,
-    "totalCount": 586,
+    "crawledCount": 420,
+    "totalCount": 589,
     "addedCount": 3,
-    "skippedCount": 2869,
+    "skippedCount": 2871,
     "sources": [
       {
         "source": "openrouter",
         "ok": true,
         "mode": "live",
-        "fetchedCount": 474,
-        "candidatesCount": 345
+        "fetchedCount": 477,
+        "candidatesCount": 347
       },
       {
         "source": "rss",
@@ -10198,6 +10198,45 @@
       ]
     },
     {
+      "id": "mistral-mistral-small-4-119b-2603-eagle",
+      "orgId": "mistral",
+      "name": "Mistral-Small-4-119B-2603-eagle",
+      "releaseDate": "2026-03-04",
+      "releaseMonth": "2026-03",
+      "tier": "notable",
+      "categories": [
+        "open-weights",
+        "compact"
+      ],
+      "openWeights": true,
+      "contextWindow": null,
+      "summary": {
+        "ja": "Mistral AIが公開したMistral-Small-4-119B-2603-eagle（主要アップデートモデル・オープンウェイト公開）。",
+        "zh": "Mistral AI发布的 Mistral-Small-4-119B-2603-eagle，重要版本更新、开放权重开源。",
+        "en": "Mistral-Small-4-119B-2603-eagle by Mistral AI: vLLM en fr de es pt it ja ko ru zh ar fa id ms ne pl ro sr sv tr uk vi hi bn base_model:mistralai/Mistral-Small-4-119B-2603 base_model:finetune:mistr…"
+      },
+      "highlights": {
+        "ja": [
+          "2026-03-04 公開（自動クロール検知: Hugging Face (mistralai)）",
+          "主要アップデートモデル / オープンウェイト公開"
+        ],
+        "zh": [
+          "发布于 2026-03-04（每日自动抓取收录）",
+          "重要版本更新 / 开放权重开源"
+        ],
+        "en": [
+          "Released 2026-03-04 (auto-tracked via Hugging Face (mistralai))",
+          "Notable release · open-weights"
+        ]
+      },
+      "officialUrl": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603-eagle",
+      "source": "crawled",
+      "discoveredFrom": "Hugging Face (mistralai)",
+      "aliases": [
+        "mistral-small-4-119b-2603-eagle"
+      ]
+    },
+    {
       "id": "phi-4-reasoning-vision",
       "orgId": "others",
       "creator": "Microsoft",
@@ -14979,6 +15018,45 @@
       ]
     },
     {
+      "id": "kimi-kimi-k2-0905",
+      "orgId": "kimi",
+      "name": "Kimi K2 0905",
+      "releaseDate": "2025-09-04",
+      "releaseMonth": "2025-09",
+      "tier": "flagship",
+      "categories": [
+        "flagship",
+        "open-weights"
+      ],
+      "openWeights": true,
+      "contextWindow": "256K",
+      "summary": {
+        "ja": "Moonshot (Kimi)が公開したKimi K2 0905（フラッグシップ世代モデル・オープンウェイト公開・最大256Kコンテキスト）。",
+        "zh": "月之暗面 (Kimi)发布的 Kimi K2 0905，新一代旗舰模型、开放权重开源、支持 256K 上下文。",
+        "en": "Kimi K2 0905 by Moonshot (Kimi): Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by…"
+      },
+      "highlights": {
+        "ja": [
+          "2025-09-04 公開（自動クロール検知: OpenRouter API）",
+          "フラッグシップ世代モデル / オープンウェイト公開 / 最大256Kコンテキスト"
+        ],
+        "zh": [
+          "发布于 2025-09-04（每日自动抓取收录）",
+          "新一代旗舰模型 / 开放权重开源 / 支持 256K 上下文"
+        ],
+        "en": [
+          "Released 2025-09-04 (auto-tracked via OpenRouter API)",
+          "Flagship release · open-weights · 256K context window"
+        ]
+      },
+      "officialUrl": "https://openrouter.ai/models/moonshotai/kimi-k2-0905",
+      "source": "crawled",
+      "discoveredFrom": "OpenRouter API",
+      "aliases": [
+        "kimi k2 0905"
+      ]
+    },
+    {
       "id": "deepseek-v3-1",
       "orgId": "deepseek",
       "name": "DeepSeek-V3.1",
@@ -16502,6 +16580,45 @@
       "aliases": [
         "kimi-k2",
         "kimi k2"
+      ]
+    },
+    {
+      "id": "kimi-kimi-k2-0711",
+      "orgId": "kimi",
+      "name": "Kimi K2 0711",
+      "releaseDate": "2025-07-11",
+      "releaseMonth": "2025-07",
+      "tier": "flagship",
+      "categories": [
+        "flagship",
+        "open-weights"
+      ],
+      "openWeights": true,
+      "contextWindow": "128K",
+      "summary": {
+        "ja": "Moonshot (Kimi)が公開したKimi K2 0711（フラッグシップ世代モデル・オープンウェイト公開・最大128Kコンテキスト）。",
+        "zh": "月之暗面 (Kimi)发布的 Kimi K2 0711，新一代旗舰模型、开放权重开源、支持 128K 上下文。",
+        "en": "Kimi K2 0711 by Moonshot (Kimi): Kimi K2 Instruct is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32 bil…"
+      },
+      "highlights": {
+        "ja": [
+          "2025-07-11 公開（自動クロール検知: OpenRouter API）",
+          "フラッグシップ世代モデル / オープンウェイト公開 / 最大128Kコンテキスト"
+        ],
+        "zh": [
+          "发布于 2025-07-11（每日自动抓取收录）",
+          "新一代旗舰模型 / 开放权重开源 / 支持 128K 上下文"
+        ],
+        "en": [
+          "Released 2025-07-11 (auto-tracked via OpenRouter API)",
+          "Flagship release · open-weights · 128K context window"
+        ]
+      },
+      "officialUrl": "https://openrouter.ai/models/moonshotai/kimi-k2",
+      "source": "crawled",
+      "discoveredFrom": "OpenRouter API",
+      "aliases": [
+        "kimi k2 0711"
       ]
     },
     {
